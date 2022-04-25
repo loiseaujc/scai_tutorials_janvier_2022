@@ -1,0 +1,13 @@
+\mode<presentation>
+
+% Settings
+\setbeamercolor*{title page header}{fg=black}
+\setbeamercolor*{author}{fg=black}
+\setbeamercolor*{date}{fg=black}
+\setbeamercolor*{item}{fg=white}
+\setbeamercolor*{frametitle}{fg=black}
+\setbeamercolor*{background canvas}{bg=black}
+\setbeamercolor{normal text}{fg=white}
+
+\mode
+<all>

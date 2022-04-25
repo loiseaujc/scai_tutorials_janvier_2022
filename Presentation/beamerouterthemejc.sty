@@ -1,0 +1,24 @@
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{jc}[1][]
+{%
+  \begin{tcolorbox}[
+    enhanced,
+    sharp corners,
+    spread upwards,
+    frame hidden,
+    boxrule=0pt,
+    interior style tile={width=\paperwidth, height=\paperheight}{background.jpg},
+    before skip=0pt,
+    halign=left,
+    height=1cm
+    ]
+
+    \usebeamercolor{frametitle}\color{fg}
+    \textbf\insertframetitle
+
+  \end{tcolorbox}
+}
+
+\mode<all>

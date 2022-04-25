@@ -1,0 +1,47 @@
+\mode<presentation>
+
+
+% Title page
+\defbeamertemplate*{title page}{jc}[1][]
+{ 
+  \begin{tikzpicture}[overlay, remember picture]
+
+    \node[inner sep=0pt,outer sep=0pt,anchor=north east] at (current page.north east)
+    {\includegraphics[width=\the\paperwidth,height=\the\paperheight]{background.jpg}};
+
+  \end{tikzpicture}
+
+  \vskip2cm%
+  \begin{beamercolorbox}[center, #1]{title page header}
+    \usebeamerfont{title}\Large\textbf\inserttitle\par%
+  \end{beamercolorbox}%
+  \vskip0.5cm%
+  \begin{beamercolorbox}[center, #1]{author}
+    \usebeamerfont{author}\textcolor{black}{\insertauthor}%
+  \end{beamercolorbox}
+  \vskip0.25cm%
+  \begin{beamercolorbox}[center, #1]{date}
+    \usebeamerfont{author}\small\textcolor{black}{\insertdate}%
+  \end{beamercolorbox}
+  \vfill
+}
+
+% Section page
+\defbeamertemplate*{section page}{jc}[1][]
+{ 
+  \begin{tikzpicture}[overlay, remember picture]
+
+    \node[inner sep=0pt,outer sep=0pt,anchor=north east] at (current page.north east)
+    {\includegraphics[width=\the\paperwidth,height=\the\paperheight]{background.jpg}};
+
+  \end{tikzpicture}
+
+  \vskip2cm%
+  \begin{beamercolorbox}[center, #1]{section title}
+    \usebeamerfont{title}\Large\textbf\insertsection\par%
+  \end{beamercolorbox}%
+  \vfill
+}
+
+\mode
+<all>
