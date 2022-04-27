@@ -19,6 +19,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
+\usepackage[]{nicefrac}
+
 \usepackage[]{amsmath, amssymb, amsfonts}
 \usepackage[]{bm}
 
@@ -26,6 +28,10 @@
 
 \usepackage{tikz}
 \usetikzlibrary{shapes}
+
+\DeclareMathOperator*{\minimize}{minimize~}
+\DeclareMathOperator*{\maximize}{maximize~}
+\DeclareMathOperator*{\subto}{subject~to~}
 
 %%%%%
 %%%%%
@@ -133,8 +139,8 @@
       \fill[thick, black, fill=gray!40] (0, 0) circle (3);
     \end{scope}
 
-    \node[anchor=east] at (-2, -3.5) {Black box models};
-    \node[anchor=west] at (2, -3.5) {White box models};
+    \node[anchor=east] at (-2, -3.5) {\textbf{Black box models}};
+    \node[anchor=west] at (2, -3.5) {\textbf{White box models}};
 
     \node at (-2, 0) (A) {};
     \path (A) ++(135:2.75) node[anchor=west] {Feedforward nets};
@@ -182,18 +188,36 @@
     coltitle=black,
     coltext=white,
     colback=black,
-    title=Singular value decomposition,
+    title=\textbf{Singular value decomposition},
     frame style tile={width=\paperwidth}{background.jpg}
     ]
-    
-    \large
-    \[
-      \begin{aligned}
-        \bm{Av}_i & = \sigma_i \bm{u}_i \\
-        \bm{A}^T \bm{u}_i & = \sigma_i \bm{v}_i
-      \end{aligned}
-    \]
-    
+
+    \begin{overprint}
+
+      \onslide<1>
+      \large
+      \[
+      \bm{A} = \bm{U} \boldsymbol{\Sigma} \bm{V}^T
+      \]
+
+      \onslide<2>
+      \large
+      \[
+      \begin{bmatrix}
+        \bm{0} & \bm{A} \\
+        \bm{A}^T & \bm{0}
+      \end{bmatrix}
+      \begin{bmatrix}
+        \bm{u}_i \\ \bm{v}_i
+      \end{bmatrix}
+      =
+      \sigma_i
+      \begin{bmatrix}
+        \bm{u}_i \\ \bm{v}_i
+      \end{bmatrix}
+      \]
+
+    \end{overprint}
   \end{tcolorbox}
 
   \bigskip
@@ -201,6 +225,308 @@
   Generalization of the \emph{eigenvalue decomposition} to \textbf{non-square matrices} by E. Beltrami (1873) and C. Jordan (1874).
   The first efficient numerical algorithm was developed by G.\ Golub \emph{et al.} in the late 1960s.
   
+  \vfill
+\end{frame}
+
+\begin{frame}
+  Schematic SVD
+\end{frame}
+
+\begin{frame}{Geometric interpretation}
+
+\end{frame}
+
+\begin{frame}{Ordinary least-squares}
+  \vfill
+  \begin{minipage}{.48\textwidth}
+    \begin{overprint}
+      \onslide<1>
+      \Large
+      \[
+      \minimize_{\bm{x}} \dfrac{1}{2} \| \bm{Ax} - \bm{b} \|_2^2
+      \]
+
+      \onslide<2>
+      \Large
+      \[
+      \hat{\bm{x}} = \bm{A}^{\dagger} \bm{b}
+      \]
+
+      \onslide<3>
+      \Large
+      \[
+      \hat{\bm{x}} = \bm{V} \boldsymbol{\Sigma}^{-1} \bm{U}^T \bm{b}
+      \]
+    \end{overprint}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+    \large
+    \[
+    \begin{bmatrix}
+      ~ & ~ & ~ & ~ & ~ \\
+      ~ & ~ & ~ & ~ & ~ \\
+      ~ & ~ & ~ & ~ & ~ \\
+      ~ & ~ & ~ & ~ & ~ \\
+      ~ & ~ & \bm{A} & ~ & ~ \\
+      ~ & ~ & ~ & ~ & ~ \\
+      ~ & ~ & ~ & ~ & ~ \\
+      ~ & ~ & ~ & ~ & ~ \\
+      ~ & ~ & ~ & ~ & ~
+    \end{bmatrix}
+    \begin{bmatrix}
+      ~ \\ ~ \\ \bm{x} \\ ~ \\ ~
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+      ~ \\ ~ \\ ~ \\ ~ \\ \bm{b} \\ ~ \\ ~ \\ ~ \\ ~
+    \end{bmatrix}
+    \]
+  \end{minipage}
+  \vfill
+\end{frame}
+
+\begin{frame}{Low-rank approximation}
+  \vfill
+
+  \begin{minipage}{.48\textwidth}
+    \begin{overprint}
+      \onslide<1>
+      \Large
+      \[
+      \begin{aligned}
+        \minimize_{\hat{\bm{A}}} & \| \bm{A} - \hat{\bm{A}} \|_F^2 \\
+        \subto & \mathrm{rank~} \hat{\bm{A}} = r
+      \end{aligned}
+      \]
+      
+      \onslide<2>
+      \Large
+      \[
+      \hat{\bm{A}} = \sum_{i=1}^k \sigma_i \bm{u}_i \bm{v}_i^T
+      \]
+    \end{overprint}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}{Orthogonal Procrustes problem}
+  \vfill
+  \begin{minipage}{.48\textwidth}
+    \begin{overprint}
+      \onslide<1>
+      \large
+      \[
+      \begin{aligned}
+        \minimize_{\bm{R}} & \| \bm{RA} - \bm{B} \|_F \\
+        \subto & \bm{R}^T \bm{R} = \bm{I}
+      \end{aligned}
+      \]
+
+      \onslide<2>
+      \large
+      \[
+      \bm{BA}^T = \bm{U} \boldsymbol{\Sigma} \bm{V}^T
+      \]
+
+      \onslide<3>
+      \large
+      \[
+      \bm{R} = \bm{UV}^T
+      \]
+
+    \end{overprint}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+    \includegraphics[width=\textwidth]{procrustes}
+  \end{minipage}
+  \vfill
+\end{frame}
+
+\section{SVD in data-driven modeling}
+\begin{frame}
+  \sectionpage
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  \Large
+
+  \[
+  \bm{y} = \bm{Kx} + \varepsilon
+  \]
+
+  \vfill
+\end{frame}
+
+\begin{frame}{Linear deconvolution problem}
+  Schematic of a linear system
+\end{frame}
+
+\begin{frame}{Linear deconvolution problem}
+  Schematic of deconvolution
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  \Large
+
+  \[
+  \bm{y} = \bm{Kx} + \varepsilon
+  \]
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+
+\end{frame}
+
+\begin{frame}
+
+  \vfill
+
+  \begin{tcolorbox}[
+      enhanced,
+      coltitle=black,
+      coltext=white,
+      colback=black,
+      title=\textbf{Fundamental problem of component analysis},
+      frame style tile={width=\paperwidth}{background.jpg}
+    ]
+
+    \begin{overprint}
+      \onslide<1>
+      \large
+      \[
+      \begin{aligned}
+        \minimize_{\bm{K}} & \| \bm{M}^{\frac12} \left( \bm{Y} - \bm{KX} \right) \|_F \\
+        \subto & \mathrm{rank~} \bm{K} = r.
+      \end{aligned}
+      \]
+
+      \onslide<2>
+      \large
+      \[
+      \begin{aligned}
+        \minimize_{\bm{P}, \bm{Q}} & \| \bm{M}^{\frac12}  \left( \bm{Y} - \bm{PQ}^T \bm{X} \right) \|_F \\
+        \subto & \bm{P}^T \bm{MP} = \bm{I}_r \quad \left( \mathrm{ou~} \bm{Q}^T \bm{XX}^T \bm{Q} = \bm{I}_r \right).
+      \end{aligned}
+      \]
+
+    \end{overprint}
+
+  \end{tcolorbox}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  \Large
+  \[
+  \begin{bmatrix}
+    \bm{M} & \bm{0} \\
+    \bm{0} & \bm{0}
+  \end{bmatrix}
+  \begin{bmatrix}
+    \bm{p}_i \\ \bm{q}_i
+  \end{bmatrix}
+  \lambda_i
+  =
+  \begin{bmatrix}
+    \bm{0} & \bm{M} \bm{C}_{\bm{yx}} \\
+    \bm{C}_{\bm{xy}} \bm{M} & - \bm{C}_{\bm{xx}}
+  \end{bmatrix}
+  \begin{bmatrix}
+    \bm{p}_i \\ \bm{q}_i
+  \end{bmatrix}
+  \]
+
+  \vfill
+\end{frame}
+
+\begin{frame}{Proper Orthogonal Decomposition}
+  \vfill
+
+  \begin{minipage}{.38\textwidth}
+    \begin{tcolorbox}[
+        enhanced,
+        coltitle=black,
+        coltext=white,
+        colback=black,
+        title=\textbf{POD eigenproblem},
+        frame style tile={width=\paperwidth}{background.jpg}
+      ]
+      \large
+      \[
+      \bm{M} \bm{p}_i \lambda_i = \bm{C}_{\bm{xx}} \bm{p}_i
+      \]
+
+      \smallskip
+    \end{tcolorbox}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.58\textwidth}
+    POD is recovered if $\bm{X} = \bm{Y}$ and $\bm{P} = \bm{Q}$.
+    It aims at characterizing the second order statistics of the random variable $\bm{x}$.
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.48\textwidth}
+
+    \centering
+    \textbf{Complex Ginzburg-Landau equation}
+
+    \[
+    \dfrac{\partial q}{\partial t} = -U \dfrac{\partial q}{\partial x} + \mu(x) q + \gamma \dfrac{\partial^2 q}{\partial x^2} - \beta \vert q \vert^2 q
+    \]
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.48\textwidth}
+    Covariance matrix
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+    Eigenspectrum
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.48\textwidth}
+    POD mode
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+    Phase portrait
+  \end{minipage}
+
   \vfill
 \end{frame}
 

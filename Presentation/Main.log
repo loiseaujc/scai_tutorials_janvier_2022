@@ -1,13 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.15)  25 APR 2022 17:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.14)  27 APR 2022 08:59
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
-**Main.tex
-(./Main.tex
-LaTeX2e <2020-02-02> patch level 2
-L3 programming layer <2020-02-14>
-(/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
+**\nonstopmode\input Main.tex
+(./Main.tex (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamer.cls
 Document Class: beamer 2019/09/29 v3.57 A class for typesetting presentations
 (/usr/share/texlive/texmf-dist/tex/latex/beamer/beamerbasemodes.sty
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
@@ -929,6 +925,15 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 )
+(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip63
+\L@UnitsRaiseTextstyle=\skip64
+\L@UnitsRaiseScriptstyle=\skip65
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+))
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup6
@@ -1007,22 +1012,22 @@ File: pgflibraryshapes.multipart.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ))) (./Main.aux)
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
-LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1082,7 +1087,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box114
-Package hyperref Info: Link coloring OFF on input line 46.
+Package hyperref Info: Link coloring OFF on input line 52.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1095,9 +1100,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count348
 )
-LaTeX Info: Redefining \ref on input line 46.
-LaTeX Info: Redefining \pageref on input line 46.
-LaTeX Info: Redefining \nameref on input line 46.
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
 
 (./Main.out) (./Main.out)
 \@outlinefile=\write7
@@ -1133,135 +1138,282 @@ Dictionary: translator-theorem-dictionary, Language: English
 \c@lstlisting=\count351
  (./Main.nav)
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
-(Font)              `T1/NotoSans-TLF/regular/n' on input line 46.
+(Font)              `T1/NotoSans-TLF/regular/n' on input line 52.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
-(Font)              scaled to size 6.0pt on input line 46.
-<background.jpg, id=53, 1027.84pt x 770.88pt>
+(Font)              scaled to size 6.0pt on input line 52.
+<background.jpg, id=57, 1027.84pt x 770.88pt>
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 50.
+Package pdftex.def Info: background.jpg  used on input line 56.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
-(Font)              `T1/NotoSans-TLF/regular/n' on input line 50.
+(Font)              `T1/NotoSans-TLF/regular/n' on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
-(Font)              scaled to size 14.4pt on input line 50.
+(Font)              scaled to size 14.4pt on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/b/n' aliased to
-(Font)              `T1/NotoSans-TLF/bold/n' on input line 50.
+(Font)              `T1/NotoSans-TLF/bold/n' on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/bold/n' will be
-(Font)              scaled to size 14.4pt on input line 50.
+(Font)              scaled to size 14.4pt on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
-(Font)              `T1/NotoSans-TLF/regular/n' on input line 50.
+(Font)              `T1/NotoSans-TLF/regular/n' on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 50.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+(Font)              scaled to size 10.0pt on input line 56.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 56.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 56.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
-(Font)              `T1/NotoSans-TLF/regular/n' on input line 50.
+(Font)              `T1/NotoSans-TLF/regular/n' on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
-(Font)              scaled to size 7.0pt on input line 50.
+(Font)              scaled to size 7.0pt on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
-(Font)              `T1/NotoSans-TLF/regular/n' on input line 50.
+(Font)              `T1/NotoSans-TLF/regular/n' on input line 56.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
-(Font)              scaled to size 4.0pt on input line 50.
+(Font)              scaled to size 4.0pt on input line 56.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./background.jpg>]
-<imgs/myself.jpg, id=62, 2055.68pt x 1547.7825pt>
+<imgs/myself.jpg, id=66, 2055.68pt x 1547.7825pt>
 File: imgs/myself.jpg Graphic file (type jpg)
 <use imgs/myself.jpg>
-Package pdftex.def Info: imgs/myself.jpg  used on input line 89.
+Package pdftex.def Info: imgs/myself.jpg  used on input line 95.
 (pdftex.def)             Requested size: 111.53432pt x 83.95924pt.
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 89.
+Package pdftex.def Info: background.jpg  used on input line 95.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
  [2
 
  <./imgs/myself.jpg>]
-<imgs/snapshot_re125_0.png, id=69, 236.8047pt x 88.4103pt>
+<imgs/snapshot_re125_0.png, id=73, 236.8047pt x 88.4103pt>
 File: imgs/snapshot_re125_0.png Graphic file (type png)
 <use imgs/snapshot_re125_0.png>
-Package pdftex.def Info: imgs/snapshot_re125_0.png  used on input line 117.
+Package pdftex.def Info: imgs/snapshot_re125_0.png  used on input line 123.
 (pdftex.def)             Requested size: 270.86732pt x 101.13681pt.
-<imgs/tic_m=1_fourier_mode_snapshot.png, id=71, 334.6101pt x 73.7154pt>
+<imgs/tic_m=1_fourier_mode_snapshot.png, id=75, 334.6101pt x 73.7154pt>
 File: imgs/tic_m=1_fourier_mode_snapshot.png Graphic file (type png)
 <use imgs/tic_m=1_fourier_mode_snapshot.png>
 Package pdftex.def Info: imgs/tic_m=1_fourier_mode_snapshot.png  used on input 
-line 117.
+line 123.
 (pdftex.def)             Requested size: 270.86732pt x 59.67537pt.
-<imgs/temperature_field_00000.png, id=72, 181.3977pt x 156.585pt>
+<imgs/temperature_field_00000.png, id=76, 181.3977pt x 156.585pt>
 File: imgs/temperature_field_00000.png Graphic file (type png)
 <use imgs/temperature_field_00000.png>
 Package pdftex.def Info: imgs/temperature_field_00000.png  used on input line 1
-17.
+23.
 (pdftex.def)             Requested size: 111.53432pt x 96.28128pt.
 
 [3
 
  <./imgs/snapshot_re125_0.png> <./imgs/tic_m=1_fourier_mode_snapshot.png> <./im
 gs/temperature_field_00000.png>]
+LaTeX Font Info:    Font shape `T1/NotoSans-TLF/b/n' aliased to
+(Font)              `T1/NotoSans-TLF/bold/n' on input line 163.
+LaTeX Font Info:    Font shape `T1/NotoSans-TLF/bold/n' will be
+(Font)              scaled to size 10.95pt on input line 163.
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 157.
+Package pdftex.def Info: background.jpg  used on input line 163.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
  [4
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 161.
+Package pdftex.def Info: background.jpg  used on input line 167.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
  [5
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 165.
+Package pdftex.def Info: background.jpg  used on input line 171.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
  [6
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 169.
+Package pdftex.def Info: background.jpg  used on input line 175.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
  [7
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 174.
+Package pdftex.def Info: background.jpg  used on input line 180.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
  [8
 
 ]
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
-(Font)              `T1/NotoSans-TLF/regular/n' on input line 205.
+(Font)              `T1/NotoSans-TLF/regular/n' on input line 229.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
-(Font)              scaled to size 12.0pt on input line 205.
+(Font)              scaled to size 12.0pt on input line 229.
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
-Package pdftex.def Info: background.jpg  used on input line 205.
+Package pdftex.def Info: background.jpg  used on input line 229.
 (pdftex.def)             Requested size: 455.24408pt x 341.43492pt.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/it' aliased to
-(Font)              `T1/NotoSans-TLF/regular/it' on input line 205.
+(Font)              `T1/NotoSans-TLF/regular/it' on input line 229.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/it' will be
-(Font)              scaled to size 10.95pt on input line 205.
-LaTeX Font Info:    Font shape `T1/NotoSans-TLF/b/n' aliased to
-(Font)              `T1/NotoSans-TLF/bold/n' on input line 205.
-LaTeX Font Info:    Font shape `T1/NotoSans-TLF/bold/n' will be
-(Font)              scaled to size 10.95pt on input line 205.
+(Font)              scaled to size 10.95pt on input line 229.
  [9
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 229.
+(pdftex.def)             Requested size: 455.24408pt x 341.43492pt.
+ [10
+
+] [11
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 237.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [12
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 287.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+
+[13
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 287.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [14
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 287.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [15
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 315.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [16
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 315.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [17
+
+]
+<imgs/procrustes.png, id=167, 445.9059pt x 348.1005pt>
+File: imgs/procrustes.png Graphic file (type png)
+<use imgs/procrustes.png>
+Package pdftex.def Info: imgs/procrustes.png  used on input line 349.
+(pdftex.def)             Requested size: 191.20082pt x 149.26599pt.
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 349.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [18
+
+ <./imgs/procrustes.png>]
+File: imgs/procrustes.png Graphic file (type png)
+<use imgs/procrustes.png>
+Package pdftex.def Info: imgs/procrustes.png  used on input line 349.
+(pdftex.def)             Requested size: 191.20082pt x 149.26599pt.
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 349.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [19
+
+]
+File: imgs/procrustes.png Graphic file (type png)
+<use imgs/procrustes.png>
+Package pdftex.def Info: imgs/procrustes.png  used on input line 349.
+(pdftex.def)             Requested size: 191.20082pt x 149.26599pt.
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 349.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [20
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 354.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [21
+
+] [22
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 370.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+
+[23
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 374.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [24
+
+] [25
+
+] [26
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 429.
+(pdftex.def)             Requested size: 455.24408pt x 341.43492pt.
+ [27
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 429.
+(pdftex.def)             Requested size: 455.24408pt x 341.43492pt.
+ [28
+
+] [29
+
+]
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 484.
+(pdftex.def)             Requested size: 455.24408pt x 341.43492pt.
+File: background.jpg Graphic file (type jpg)
+<use background.jpg>
+Package pdftex.def Info: background.jpg  used on input line 484.
+(pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [30
+
+] [31
+
+] [32
+
+] [33
 
 ]
 \tf@nav=\write8
@@ -1273,36 +1425,42 @@ LaTeX Font Info:    Font shape `T1/NotoSans-TLF/bold/n' will be
 \tf@snm=\write10
 \openout10 = `Main.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 533.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 533.
  (./Main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 533.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 533.
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 1FD52D04610FCA3C3BF3836EF721B036;58.
+(rerunfilecheck)             Checksum: 70D7AD07C9DB4A4847BA8653DF457AC4;120.
  ) 
 Here is how much of TeX's memory you used:
- 31045 strings out of 481239
- 674100 string characters out of 5920377
- 956409 words of memory out of 5000000
- 45583 multiletter control sequences out of 15000+600000
- 584781 words of font info for 95 fonts, out of 8000000 for 9000
+ 31261 strings out of 481239
+ 676999 string characters out of 5920377
+ 969932 words of memory out of 5000000
+ 45743 multiletter control sequences out of 15000+600000
+ 587246 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 76i,11n,125p,771b,1028s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,15n,125p,790b,1028s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/noto/nto_prsxmw.enc}{/usr/shar
 e/texlive/texmf-dist/fonts/enc/dvips/noto/nto_cwvxtj.enc}</usr/share/texlive/te
 xmf-dist/fonts/type1/google/noto/NotoSans-Bold.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/google/noto/NotoSans-Italic.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/google/noto/NotoSans-Regular.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmsy10.pfb>
-Output written on Main.pdf (9 pages, 1018354 bytes).
+s/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+b10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmi
+b8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on Main.pdf (33 pages, 1281614 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 96 compressed objects within 1 object stream
- 20 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 69 named destinations out of 1000 (max. 500000)
+ 233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
