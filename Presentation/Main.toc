@@ -1,2 +1,7 @@
-\beamer@sectionintoc {1}{A brief overview of SVD}{8}{0}{1}
-\beamer@sectionintoc {2}{SVD in data-driven modeling}{21}{0}{2}
+\beamer@sectionintoc {1}{A brief overview of SVD}{3}{0}{1}
+\beamer@sectionintoc {2}{Extracting coherent patterns}{22}{0}{2}
+\beamer@sectionintoc {3}{Optimal sensor placement}{42}{0}{3}
+\beamer@sectionintoc {4}{State estimation and low-rank sensing}{55}{0}{4}
+\beamer@sectionintoc {5}{Reduced-order modeling}{64}{0}{5}
+\beamer@sectionintoc {6}{System identification}{78}{0}{6}
+\beamer@sectionintoc {7}{Conclusion}{94}{0}{7}
