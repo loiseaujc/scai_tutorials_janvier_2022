@@ -1,2 +1,0 @@
-\beamer@sectionintoc {1}{A brief overview of SVD}{8}{0}{1}
-\beamer@sectionintoc {2}{SVD in data-driven modeling}{21}{0}{2}
