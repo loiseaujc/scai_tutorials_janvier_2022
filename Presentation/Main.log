@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.14)  2 MAY 2022 15:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.4.14)  3 MAY 2022 09:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1425,24 +1425,7 @@ Package pdftex.def Info: background.jpg  used on input line 362.
 ] [14
 
 ]
-\openout4 = `Main.vrb'.
-
- (./Main.vrb
-LaTeX Font Info:    Trying to load font information for T1+NotoSansMono-TLF on 
-input line 16.
-
-(/usr/share/texlive/texmf-dist/tex/latex/noto/T1NotoSansMono-TLF.fd
-File: T1NotoSansMono-TLF.fd 2019/12/09 (autoinst) Font definitions for T1/NotoS
-ansMono-TLF.
-)
-LaTeX Font Info:    Font shape `T1/NotoSansMono-TLF/m/n' aliased to
-(Font)              `T1/NotoSansMono-TLF/regular/n' on input line 16.
-LaTeX Font Info:    Font shape `T1/NotoSansMono-TLF/regular/n' will be
-(Font)              scaled to size 10.95pt on input line 16.
-) [15
-
-]
-<data/camera.png, id=175, 237.0456pt x 237.0456pt>
+<data/camera.png, id=169, 237.0456pt x 237.0456pt>
 File: data/camera.png Graphic file (type png)
 <use data/camera.png>
 Package pdftex.def Info: data/camera.png  used on input line 422.
@@ -1451,118 +1434,118 @@ File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 422.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
-
-[16
+ [15
 
  <./data/camera.png>]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 436.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [17
+ [16
 
 ]
 Package pgfplots info on input line 469: Using 'lua backend=false' for axis: ym
 ode=log unsupported (yet).
 PGFPlots: reading {data/camera_svd.dat}
- [18
+
+[17
 
 ]
 PGFPlots: reading {data/camera_svd_bis.dat}
- [19
+ [18
 
 ]
-<imgs/camera_svd_1_comp.png, id=200, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_1_comp.png, id=193, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_1_comp.png Graphic file (type png)
 <use imgs/camera_svd_1_comp.png>
 Package pdftex.def Info: imgs/camera_svd_1_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_2_comp.png, id=201, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_2_comp.png, id=194, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_2_comp.png Graphic file (type png)
 <use imgs/camera_svd_2_comp.png>
 Package pdftex.def Info: imgs/camera_svd_2_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_3_comp.png, id=202, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_3_comp.png, id=195, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_3_comp.png Graphic file (type png)
 <use imgs/camera_svd_3_comp.png>
 Package pdftex.def Info: imgs/camera_svd_3_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_4_comp.png, id=203, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_4_comp.png, id=196, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_4_comp.png Graphic file (type png)
 <use imgs/camera_svd_4_comp.png>
 Package pdftex.def Info: imgs/camera_svd_4_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_5_comp.png, id=204, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_5_comp.png, id=197, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_5_comp.png Graphic file (type png)
 <use imgs/camera_svd_5_comp.png>
 Package pdftex.def Info: imgs/camera_svd_5_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_6_comp.png, id=205, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_6_comp.png, id=198, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_6_comp.png Graphic file (type png)
 <use imgs/camera_svd_6_comp.png>
 Package pdftex.def Info: imgs/camera_svd_6_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_7_comp.png, id=206, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_7_comp.png, id=199, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_7_comp.png Graphic file (type png)
 <use imgs/camera_svd_7_comp.png>
 Package pdftex.def Info: imgs/camera_svd_7_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_8_comp.png, id=207, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_8_comp.png, id=200, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_8_comp.png Graphic file (type png)
 <use imgs/camera_svd_8_comp.png>
 Package pdftex.def Info: imgs/camera_svd_8_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_9_comp.png, id=208, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_9_comp.png, id=201, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_9_comp.png Graphic file (type png)
 <use imgs/camera_svd_9_comp.png>
 Package pdftex.def Info: imgs/camera_svd_9_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_10_comp.png, id=209, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_10_comp.png, id=202, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_10_comp.png Graphic file (type png)
 <use imgs/camera_svd_10_comp.png>
 Package pdftex.def Info: imgs/camera_svd_10_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_11_comp.png, id=210, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_11_comp.png, id=203, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_11_comp.png Graphic file (type png)
 <use imgs/camera_svd_11_comp.png>
 Package pdftex.def Info: imgs/camera_svd_11_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_12_comp.png, id=211, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_12_comp.png, id=204, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_12_comp.png Graphic file (type png)
 <use imgs/camera_svd_12_comp.png>
 Package pdftex.def Info: imgs/camera_svd_12_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_13_comp.png, id=212, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_13_comp.png, id=205, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_13_comp.png Graphic file (type png)
 <use imgs/camera_svd_13_comp.png>
 Package pdftex.def Info: imgs/camera_svd_13_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_14_comp.png, id=213, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_14_comp.png, id=206, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_14_comp.png Graphic file (type png)
 <use imgs/camera_svd_14_comp.png>
 Package pdftex.def Info: imgs/camera_svd_14_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_15_comp.png, id=214, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_15_comp.png, id=207, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_15_comp.png Graphic file (type png)
 <use imgs/camera_svd_15_comp.png>
 Package pdftex.def Info: imgs/camera_svd_15_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_16_comp.png, id=215, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_16_comp.png, id=208, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_16_comp.png Graphic file (type png)
 <use imgs/camera_svd_16_comp.png>
 Package pdftex.def Info: imgs/camera_svd_16_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_17_comp.png, id=216, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_17_comp.png, id=209, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_17_comp.png Graphic file (type png)
 <use imgs/camera_svd_17_comp.png>
 Package pdftex.def Info: imgs/camera_svd_17_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_18_comp.png, id=217, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_18_comp.png, id=210, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_18_comp.png Graphic file (type png)
 <use imgs/camera_svd_18_comp.png>
 Package pdftex.def Info: imgs/camera_svd_18_comp.png  used on input line 547.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
- [20
+ [19
 
  <./imgs/camera_svd_1_comp.png> <./imgs/camera_svd_2_comp.png> <./imgs/camera_s
 vd_3_comp.png> <./imgs/camera_svd_4_comp.png> <./imgs/camera_svd_5_comp.png> <.
@@ -1572,115 +1555,115 @@ mgs/camera_svd_11_comp.png> <./imgs/camera_svd_12_comp.png> <./imgs/camera_svd_
 13_comp.png> <./imgs/camera_svd_14_comp.png> <./imgs/camera_svd_15_comp.png> <.
 /imgs/camera_svd_16_comp.png> <./imgs/camera_svd_17_comp.png> <./imgs/camera_sv
 d_18_comp.png>]
-<imgs/camera_svd_1_estimate.png, id=241, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_1_estimate.png, id=235, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_1_estimate.png Graphic file (type png)
 <use imgs/camera_svd_1_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_1_estimate.png  used on input line 594
 .
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_6_estimate.png, id=242, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_6_estimate.png, id=236, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_6_estimate.png Graphic file (type png)
 <use imgs/camera_svd_6_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_6_estimate.png  used on input line 594
 .
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_11_estimate.png, id=243, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_11_estimate.png, id=237, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_11_estimate.png Graphic file (type png)
 <use imgs/camera_svd_11_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_11_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_16_estimate.png, id=244, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_16_estimate.png, id=238, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_16_estimate.png Graphic file (type png)
 <use imgs/camera_svd_16_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_16_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_21_estimate.png, id=245, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_21_estimate.png, id=239, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_21_estimate.png Graphic file (type png)
 <use imgs/camera_svd_21_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_21_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_26_estimate.png, id=246, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_26_estimate.png, id=240, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_26_estimate.png Graphic file (type png)
 <use imgs/camera_svd_26_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_26_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_31_estimate.png, id=247, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_31_estimate.png, id=241, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_31_estimate.png Graphic file (type png)
 <use imgs/camera_svd_31_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_31_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_36_estimate.png, id=248, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_36_estimate.png, id=242, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_36_estimate.png Graphic file (type png)
 <use imgs/camera_svd_36_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_36_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_41_estimate.png, id=249, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_41_estimate.png, id=243, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_41_estimate.png Graphic file (type png)
 <use imgs/camera_svd_41_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_41_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_46_estimate.png, id=250, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_46_estimate.png, id=244, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_46_estimate.png Graphic file (type png)
 <use imgs/camera_svd_46_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_46_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_51_estimate.png, id=251, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_51_estimate.png, id=245, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_51_estimate.png Graphic file (type png)
 <use imgs/camera_svd_51_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_51_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_56_estimate.png, id=252, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_56_estimate.png, id=246, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_56_estimate.png Graphic file (type png)
 <use imgs/camera_svd_56_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_56_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_61_estimate.png, id=253, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_61_estimate.png, id=247, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_61_estimate.png Graphic file (type png)
 <use imgs/camera_svd_61_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_61_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_66_estimate.png, id=254, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_66_estimate.png, id=248, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_66_estimate.png Graphic file (type png)
 <use imgs/camera_svd_66_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_66_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_71_estimate.png, id=255, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_71_estimate.png, id=249, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_71_estimate.png Graphic file (type png)
 <use imgs/camera_svd_71_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_71_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_76_estimate.png, id=256, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_76_estimate.png, id=250, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_76_estimate.png Graphic file (type png)
 <use imgs/camera_svd_76_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_76_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_81_estimate.png, id=257, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_81_estimate.png, id=251, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_81_estimate.png Graphic file (type png)
 <use imgs/camera_svd_81_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_81_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
-<imgs/camera_svd_86_estimate.png, id=258, 237.0456pt x 237.0456pt>
+<imgs/camera_svd_86_estimate.png, id=252, 237.0456pt x 237.0456pt>
 File: imgs/camera_svd_86_estimate.png Graphic file (type png)
 <use imgs/camera_svd_86_estimate.png>
 Package pdftex.def Info: imgs/camera_svd_86_estimate.png  used on input line 59
 4.
 (pdftex.def)             Requested size: 59.74835pt x 59.74593pt.
- [21
+ [20
 
  <./imgs/camera_svd_1_estimate.png> <./imgs/camera_svd_6_estimate.png> <./imgs/
 camera_svd_11_estimate.png> <./imgs/camera_svd_16_estimate.png> <./imgs/camera_
@@ -1695,28 +1678,29 @@ File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 599.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
+ [21
 
-[22
+] [22
 
 ] [23
 
-] [24
-
 ]
-<imgs/reduced_order_modeling.pdf, id=298, 676.12604pt x 249.96242pt>
+<imgs/reduced_order_modeling.pdf, id=292, 676.12604pt x 249.96242pt>
 File: imgs/reduced_order_modeling.pdf Graphic file (type pdf)
 <use imgs/reduced_order_modeling.pdf>
 Package pdftex.def Info: imgs/reduced_order_modeling.pdf  used on input line 61
 9.
 (pdftex.def)             Requested size: 398.3386pt x 147.27058pt.
- [25
+ [24
 
  <./imgs/reduced_order_modeling.pdf>]
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/b/n' aliased to
 (Font)              `T1/NotoSans-TLF/bold/n' on input line 649.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/bold/n' will be
 (Font)              scaled to size 12.0pt on input line 649.
- [26
+ [25
+
+] [26
 
 ] [27
 
@@ -1725,37 +1709,37 @@ LaTeX Font Info:    Font shape `T1/NotoSans-TLF/bold/n' will be
 ] [29
 
 ]
-[30
-
-]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 742.
 (pdftex.def)             Requested size: 455.24408pt x 341.43492pt.
- [31
+ [30
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 746.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [32
+ [31
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 750.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [33
+ [32
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 754.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [34
+ [33
 
-] [35
+] [34
+
+]
+[35
 
 ] [36
 
@@ -1763,30 +1747,29 @@ Package pdftex.def Info: background.jpg  used on input line 754.
 
 ] [38
 
-] [39
-
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 875.
 (pdftex.def)             Requested size: 455.24408pt x 341.43492pt.
- [40
+ [39
 
-] [41
+] [40
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 889.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [42
+ [41
+
+] [42
 
 ] [43
 
 ] [44
 
-]
-[45
+] [45
 
 ] [46
 
@@ -1796,32 +1779,33 @@ Package pdftex.def Info: background.jpg  used on input line 889.
 
 ] [49
 
-] [50
+]
+[50
 
 ] [51
-
-] [52
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1073.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [53
+ [52
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1077.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [54
+ [53
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1082.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [55
+ [54
+
+] [55
 
 ] [56
 
@@ -1831,23 +1815,23 @@ Package pdftex.def Info: background.jpg  used on input line 1082.
 
 ] [59
 
-]
-[60
+] [60
 
 ] [61
 
 ] [62
-
-] [63
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1297.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [64
+ [63
 
-] [65
+] [64
+
+]
+[65
 
 ] [66
 
@@ -1856,8 +1840,6 @@ Package pdftex.def Info: background.jpg  used on input line 1297.
 ] [68
 
 ] [69
-
-] [70
 
 ]
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
@@ -1868,7 +1850,9 @@ LaTeX Font Info:    Font shape `T1/NotoSans-TLF/m/n' aliased to
 (Font)              `T1/NotoSans-TLF/regular/n' on input line 1417.
 LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
 (Font)              scaled to size 9.0pt on input line 1417.
- [71
+ [70
+
+] [71
 
 ] [72
 
@@ -1876,110 +1860,108 @@ LaTeX Font Info:    Font shape `T1/NotoSans-TLF/regular/n' will be
 
 ] [74
 
-]
-[75
+] [75
 
 ] [76
-
-] [77
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1528.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [78
+ [77
+
+] [78
 
 ] [79
 
-] [80
+]
+[80
 
 ] [81
-
-] [82
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 1643--1643
 []\T1/NotoSans-TLF/regular/n/10.95 Schematic mass
  []
 
-[83
+[82
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1658.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [84
+ [83
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1678.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [85
+ [84
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1697.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [86
+ [85
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1716.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [87
+ [86
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1730.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [88
+ [87
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1749.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [89
+ [88
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1769.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [90
+ [89
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1837.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [91
+ [90
+
+] [91
 
 ] [92
-
-] [93
 
 ]
 File: background.jpg Graphic file (type jpg)
 <use background.jpg>
 Package pdftex.def Info: background.jpg  used on input line 1850.
 (pdftex.def)             Requested size: 455.24655pt x 256.07324pt.
- [94
+ [93
+
+] [94
 
 ] [95
 
 ] [96
 
-] [97
-
 ]
-[98
+[97
 
 ]
 \tf@nav=\write8
@@ -1999,42 +1981,45 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2324.
 
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: BD01175D2F0F24AEE8D187C643816E25;410.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 44129 strings out of 481239
- 1087767 string characters out of 5920377
- 1751693 words of memory out of 5000000
- 58277 multiletter control sequences out of 15000+600000
- 614353 words of font info for 127 fonts, out of 8000000 for 9000
+ 43830 strings out of 481239
+ 1076850 string characters out of 5920377
+ 1751105 words of memory out of 5000000
+ 57989 multiletter control sequences out of 15000+600000
+ 613737 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,16n,136p,790b,2208s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/noto/nto_cwvxtj.enc}{/usr/shar
-e/texlive/texmf-dist/fonts/enc/dvips/noto/nto_prsxmw.enc}{/usr/share/texlive/te
-xmf-dist/fonts/enc/dvips/noto/nto_7xrktb.enc}</usr/share/texlive/texmf-dist/fon
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/noto/nto_prsxmw.enc}{/usr/shar
+e/texlive/texmf-dist/fonts/enc/dvips/noto/nto_7xrktb.enc}{/usr/share/texlive/te
+xmf-dist/fonts/enc/dvips/noto/nto_cwvxtj.enc}</usr/share/texlive/texmf-dist/fon
 ts/type1/google/noto/NotoSans-Bold.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/google/noto/NotoSans-Italic.pfb></usr/share/texlive/texmf-dist/fonts/type1/g
 oogle/noto/NotoSans-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/goog
-le/noto/NotoSansMono-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/goo
-gle/noto/NotoSerif-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy8.pfb>
-Output written on Main.pdf (98 pages, 15170884 bytes).
+le/noto/NotoSerif-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb>
+Output written on Main.pdf (97 pages, 15158466 bytes).
 PDF statistics:
- 856 PDF objects out of 1000 (max. 8388607)
- 600 compressed objects within 6 object streams
- 204 named destinations out of 1000 (max. 500000)
+ 847 PDF objects out of 1000 (max. 8388607)
+ 593 compressed objects within 6 object streams
+ 202 named destinations out of 1000 (max. 500000)
  443 words of extra memory for PDF output out of 10000 (max. 10000000)
 
