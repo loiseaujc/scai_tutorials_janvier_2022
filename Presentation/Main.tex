@@ -439,7 +439,7 @@
   \setbeamercolor{background canvas}{bg=white}
   \setbeamercolor{background canvas}{bg=white}
   \setbeamercolor{normal text}{fg=black}
-  
+
   \usebeamercolor[fg]{normal text}
 
   \begin{frame}
@@ -454,7 +454,7 @@
         width=\textwidth,
         height=.66\textheight,
         axis lines = middle,
-        y axis line style={stealth-}, 
+        y axis line style={stealth-},
         x label style={at={(axis description cs:0.5, 1.05)}, anchor=south},
         y label style={at={(axis description cs:0, 0)}, anchor=north east},
         ]
@@ -1339,8 +1339,6 @@
 
   \underline{\textbf{Controlability Gramian}}
 
-  \bigskip
-
   \Large
   {
     \[
@@ -1357,8 +1355,6 @@
 
   \underline{\textbf{Observability Gramian}}
 
-  \bigskip
-
   \Large
   {
     \[
@@ -1372,71 +1368,46 @@
 
 \begin{frame}
   \vfill
-  \centering
 
-  \underline{\textbf{Cross Gramian}}
+  \begin{tcolorbox}[
+    enhanced,
+    coltitle=black,
+    coltext=white,
+    colback=black,
+    title=\textbf{Balancing transform / Balanced tuncation},
+    frame style tile={width=\paperwidth}{background.jpg}
+    ]
 
-  \bigskip
+    \medskip
+    \Large
 
-  \Large
-  {
     \[
-    \bm{W}_{\mathcal{X}} = \displaystyle \int_0^{\infty} e^{\tau \bm{A}} \bm{B} \bm{C} e^{\tau \bm{A}} \ \mathrm{d}\tau
-    \]
-  }
-
-  \vfill
-\end{frame}
-
-\begin{frame}
-  \vfill
-
-  \Large
-  \[
-  \begin{aligned}
-    \maximize_{\bm{U}, \bm{V}} & \quad \mathrm{Tr} \left( \bm{U}^* \bm{W}_{\mathcal{X}} \bm{V} \right) \\
-    \subto & \quad \bm{U}^* \bm{U} = \bm{V}^* \bm{V} = \bm{I}_r
-  \end{aligned}
-  \]
-
-  \vfill
-\end{frame}
-
-\begin{frame}
-  \vfill
-  \centering
-
-  \underline{\textbf{Sylvester equation}}{\footnote{Its resolution is tractable only for low-dimensional systems.}}
-
-  \Large
-
-  \[
-  \bm{AW}_{\mathcal{X}} + \bm{W}_{\mathcal{X}} \bm{A} = - \bm{BC}
-  \]
-  \vfill
-\end{frame}
-
-\begin{frame}
-  \vfill
-
-  \centering
-  \underline{\textbf{Balanced Proper Orthogonal Decomposition}}
-
-  \vfill
-
-  \begin{enumerate}
-    \item[1.] For each actuator, compute the corresponding impulse reponse
-    %
-    \[
-    \bm{X}_i
-    =
     \begin{bmatrix}
-      \bm{B}_i & e^{\Delta t \bm{A}} \bm{B}_i & e^{2\Delta t \bm{A}} \bm{B}_i & \cdots & e^{n \Delta t \bm{A}} \bm{B}_i
+      \bm{0} & \bm{I} \\
+      \bm{I} & \bm{0}
+    \end{bmatrix}
+    \begin{bmatrix}
+      \bm{T} \\ \bm{S}
+    \end{bmatrix}
+    \boldsymbol{\Sigma}
+      =
+    \begin{bmatrix}
+      \bm{W}_{\mathcal{O}} & \bm{0} \\
+      \bm{0} & \bm{W}_{\mathcal{C}}
+    \end{bmatrix}
+    \begin{bmatrix}
+      \bm{T} \\ \bm{S}
     \end{bmatrix}
     \]
-    %
-    and assemble the data matrix $\bm{X} = \begin{bmatrix} \bm{X}_1 & \bm{X}_2 & \cdots & \bm{X}_p \end{bmatrix}$.
-  \end{enumerate}
+
+    \medskip
+  \end{tcolorbox}
+
+  \vfill
+
+  BT discards modes which are highly controlable but poorly observable, and vice versa.
+  The transformed system is \textbf{balanced}.
+  Its Gramians are given by $\bm{W}_{\mathcal{O}} = \bm{W}_{\mathcal{C}} = \boldsymbol{\Sigma}$ where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
 
   \vfill
 \end{frame}
@@ -1448,42 +1419,60 @@
   \underline{\textbf{Balanced Proper Orthogonal Decomposition}}
 
   \vfill
+  \begin{overprint}
+    \onslide<1>
+    \begin{enumerate}
+      \item[1.] For each actuator, compute the corresponding impulse reponse
+      %
+      \[
+      \bm{X}_i
+      =
+      \begin{bmatrix}
+        \bm{B}_i & e^{\Delta t \bm{A}} \bm{B}_i & e^{2\Delta t \bm{A}} \bm{B}_i & \cdots & e^{n \Delta t \bm{A}} \bm{B}_i
+      \end{bmatrix}
+      \]
+      %
+      and assemble the data matrix $\bm{X} = \begin{bmatrix} \bm{X}_1 & \bm{X}_2 & \cdots & \bm{X}_p \end{bmatrix}$.
+    \end{enumerate}
 
-  \begin{enumerate}
-    \item[2.] For each sensor, compute the corresponding \textbf{adjoint} impulse reponse
-    %
-    \[
-    \bm{Y}_i
-    =
-    \begin{bmatrix}
-      \bm{C}^*_i & e^{\Delta t \bm{A}^*} \bm{C}^*_i & e^{2\Delta t \bm{A}^*} \bm{C}^*_i & \cdots & e^{n \Delta t \bm{A}^*} \bm{C}_i^*
-    \end{bmatrix}
-    \]
-    %
-    and assemble the data matrix $\bm{Y} = \begin{bmatrix} \bm{Y}_1 & \bm{Y}_2 & \cdots & \bm{Y}_q \end{bmatrix}$.
-  \end{enumerate}
+    \onslide<2>
+    \begin{enumerate}
+      \item[2.] For each sensor, compute the corresponding \textbf{adjoint} impulse reponse
+      %
+      \[
+      \bm{Y}_i
+      =
+      \begin{bmatrix}
+        \bm{C}^*_i & e^{\Delta t \bm{A}^*} \bm{C}^*_i & e^{2\Delta t \bm{A}^*} \bm{C}^*_i & \cdots & e^{n \Delta t \bm{A}^*} \bm{C}_i^*
+      \end{bmatrix}
+      \]
+      %
+      and assemble the data matrix $\bm{Y} = \begin{bmatrix} \bm{Y}_1 & \bm{Y}_2 & \cdots & \bm{Y}_q \end{bmatrix}$.
+    \end{enumerate}
 
-  \vfill
-\end{frame}
+    \onslide<3>
+    \begin{enumerate}
+      \item[3.] Compute the SVD of $\bm{Y}^T \bm{X}$
+      %
+      \[
+      \bm{Y}^T \bm{X} = \bm{U} \boldsymbol{\Sigma} \bm{V}^T
+      \]
+      %
+      where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
+    \end{enumerate}
 
+    \onslide<4>
+    \begin{enumerate}
+      \item[4.] Compute the first $r$ columns and rows of the balancing transform as
+      %
+      \[
+      \bm{T} = \bm{X} \bm{V} \boldsymbol{\Sigma}^{-\frac12} \quad \text{and} \quad \bm{S} = \bm{Y} \bm{U} \boldsymbol{\Sigma}^{-\frac12}
+      \]
+      %
+      and proceed with the construction of the reduced-order model.
+    \end{enumerate}
 
-\begin{frame}
-  \vfill
-
-  \centering
-  \underline{\textbf{Balanced Proper Orthogonal Decomposition}}
-
-  \vfill
-
-  \begin{enumerate}
-    \item[3.] Approximate the cross Gramian $\bm{W}_{\mathcal{X}}$ as
-    %
-    \[
-    \bm{W}_{\mathcal{X}} \simeq \bm{XY}^T.
-    \]
-    %
-    where $\bm{X}$ and $\bm{Y}$ are the data matrices obtained in the previous steps.
-  \end{enumerate}
+  \end{overprint}
 
   \vfill
 \end{frame}
@@ -1494,19 +1483,32 @@
   \centering
   \underline{\textbf{Petrov-Galerkin projection}}
 
-  \Large
-  \[
-  \begin{aligned}
-    \dfrac{\mathrm{d} \hat{\bm{x}}}{\mathrm{d}t} & = \hat{\bm{A}} \hat{\bm{x}} + \hat{\bm{B}} \bm{u} \\
-    \hat{\bm{y}} & = \hat{\bm{C}} \hat{\bm{x}} + \hat{\bm{D}} \bm{u}
-  \end{aligned}
-  \]
+  \bigskip
+
+  \begin{overprint}
+    \onslide<1>
+    \Large
+    \[
+    \begin{aligned}
+      \dfrac{\mathrm{d} \hat{\bm{x}}}{\mathrm{d}t} & = \hat{\bm{A}} \hat{\bm{x}} + \hat{\bm{B}} \bm{u} \\
+      \hat{\bm{y}} & = \hat{\bm{C}} \hat{\bm{x}} + \hat{\bm{D}} \bm{u}
+    \end{aligned}
+    \]
+
+    \onslide<2>
+    \Large
+    \[\left(
+    \begin{array}{c|c}
+      \bm{W}^T \bm{A} \bm{V} & \bm{W}^T \bm{B} \\
+      \hline
+      \bm{C} \bm{V} & \bm{D}
+    \end{array}
+    \right)
+    \]
+
+  \end{overprint}
 
   \vfill
-\end{frame}
-
-\begin{frame}
-  Example for the Ginzburg Landau equation
 \end{frame}
 
 \begin{frame}
