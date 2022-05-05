@@ -1387,7 +1387,7 @@
       \bm{I} & \bm{0}
     \end{bmatrix}
     \begin{bmatrix}
-      \bm{T} \\ \bm{S}
+      \bm{P} \\ \bm{Q}
     \end{bmatrix}
     \boldsymbol{\Sigma}
       =
@@ -1396,7 +1396,7 @@
       \bm{0} & \bm{W}_{\mathcal{C}}
     \end{bmatrix}
     \begin{bmatrix}
-      \bm{T} \\ \bm{S}
+      \bm{P} \\ \bm{Q}
     \end{bmatrix}
     \]
 
@@ -1407,7 +1407,7 @@
 
   BT discards modes which are highly controlable but poorly observable, and vice versa.
   The transformed system is \textbf{balanced}.
-  Its Gramians are given by $\bm{W}_{\mathcal{O}} = \bm{W}_{\mathcal{C}} = \boldsymbol{\Sigma}$ where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
+  Its Gramians are given by $\hat{\bm{W}}_{\mathcal{O}} = \hat{\bm{W}}_{\mathcal{C}} = \boldsymbol{\Sigma}$ where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
 
   \vfill
 \end{frame}
@@ -1466,7 +1466,7 @@
       \item[4.] Compute the first $r$ columns and rows of the balancing transform as
       %
       \[
-      \bm{T} = \bm{X} \bm{V} \boldsymbol{\Sigma}^{-\frac12} \quad \text{and} \quad \bm{S} = \bm{Y} \bm{U} \boldsymbol{\Sigma}^{-\frac12}
+      \bm{P} = \bm{X} \bm{V} \boldsymbol{\Sigma}^{-\frac12} \quad \text{and} \quad \bm{Q} = \bm{Y} \bm{U} \boldsymbol{\Sigma}^{-\frac12}
       \]
       %
       and proceed with the construction of the reduced-order model.
@@ -1499,9 +1499,9 @@
     \Large
     \[\left(
     \begin{array}{c|c}
-      \bm{W}^T \bm{A} \bm{V} & \bm{W}^T \bm{B} \\
+      \bm{Q}^T \bm{A} \bm{P} & \bm{Q}^T \bm{B} \\
       \hline
-      \bm{C} \bm{V} & \bm{D}
+      \bm{C} \bm{P} & \bm{D}
     \end{array}
     \right)
     \]
