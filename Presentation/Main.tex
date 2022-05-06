@@ -33,9 +33,10 @@
 \usetikzlibrary{arrows, shapes}
 \usetikzlibrary{tikzmark}
 \usetikzlibrary{calc}
-\usetikzlibrary{positioning}
 \usetikzlibrary{shadows}
 \usetikzlibrary{trees, mindmap}
+\usetikzlibrary{shapes.geometric, math, positioning, calc, patterns, angles, quotes}
+\usetikzlibrary{patterns.meta,decorations.pathmorphing}
 
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
@@ -437,7 +438,6 @@
 
 {
   \setbeamercolor{background canvas}{bg=white}
-  \setbeamercolor{background canvas}{bg=white}
   \setbeamercolor{normal text}{fg=black}
 
   \usebeamercolor[fg]{normal text}
@@ -599,7 +599,10 @@
 \end{frame}
 
 \begin{frame}
-  Add Yale B faces
+  \centering
+  \vfill
+  \includegraphics[width=\textwidth]{example_images}
+  \vfill
 \end{frame}
 
 \begin{frame}
@@ -741,10 +744,31 @@
   \vfill
 \end{frame}
 
-\begin{frame}{Eigenfaces}
 
+{
+\setbeamercolor*{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=black}
+\usebeamercolor[fg]{normal text}
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.58\textwidth}
+    \centering
+    \includegraphics[height=.95\textheight]{leading_eigenfaces}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.38\textwidth}
+    \textcolor{black}{
+
+    The whole dataset can be correctly approximated using only 500 so-called eigenfaces.
+
+    }
+  \end{minipage}
+  \vfill
 \end{frame}
 
+}
 \begin{frame}{Shear-driven cavity POD modes}
   Add POD modes
 \end{frame}
@@ -889,7 +913,10 @@
 \end{frame}
 
 \begin{frame}
-
+  \centering
+  \vfill
+  \includegraphics[width=\textwidth]{dns_snapshot}
+  \vfill
 \end{frame}
 
 \begin{frame}
@@ -1065,12 +1092,43 @@
 \end{frame}
 
 \begin{frame}
-  QR sensor placement algorithm
+  \vfill
+
+  {
+  \Large
+
+  \[
+  \tikzmarknode{a} {\highlightdark{blue}{$\bm{U}$}}^T \tikzmarknode{b} {\highlightdark{red}{$\bm{P}$}} = \bm{Q} \tikzmarknode{c} {\highlightdark{Green}{$\bm{R}$}}
+  \]
+  }
+
+  \begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
+
+    \path (a.south) ++ (0, -2em) node[anchor=north east, color=blue!67] (data){Low-rank basis};
+    \draw [color=blue!87] (a.south) |- ([xshift=-0.3ex, color=blue] data.south west);
+
+    \path (b.north) ++ (0, 2em) node[anchor=south west, color=red!67] (obs){Permutation matrix};
+    \draw [color=red!87] (b.north) |- ([xshift=0.3ex, color=red] obs.south east);
+
+    \path (c.north) ++ (0, -3em) node[anchor=north west, color=Green!67] (estimate){Upper triangular matrix \\ with $\vert r_{i-1} \vert \geq \vert r_i \vert$};
+    \draw [color=Green!87] (c.south) |- ([xshift=-0.3ex, color=Green] estimate.south east);
+
+  \end{tikzpicture}
+
+  \vfill
 \end{frame}
 
-\begin{frame}{Extended Yale B Face dataset}
+{
+  \setbeamercolor*{background canvas}{bg=white}
 
+\begin{frame}%{Extended Yale B Face dataset}
+  \centering
+  \vfill
+  \includegraphics[height=.8\textheight]{mean_face_ter}
+  \vfill
 \end{frame}
+
+}
 
 \begin{frame}{Shear-driven cavity flow}
 
@@ -1286,7 +1344,12 @@
 \setbeamercolor*{background canvas}{bg=white}
 
 \begin{frame}
-  \textcolor{black}{Add figures from SIAM paper}
+  \vfill
+  \centering
+
+  \includegraphics[width=\textwidth]{eigenfaces_error_plot}
+
+  \vfill
 \end{frame}
 }
 
@@ -1297,7 +1360,10 @@
 \end{frame}
 
 \begin{frame}
-
+  \centering
+  \vfill
+  \includegraphics[width=\textwidth]{dns_snapshot}
+  \vfill
 \end{frame}
 
 
@@ -1530,8 +1596,9 @@
 \end{frame}
 
 \begin{frame}
+  \centering
   \vfill
-
+  \includegraphics[width=\textwidth]{dns_snapshot}
   \vfill
 \end{frame}
 
@@ -1630,19 +1697,76 @@
   \vfill
 \end{frame}
 
+
+{
+\setbeamercolor*{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=black}
+\usebeamercolor[fg]{normal text}
+
 \begin{frame}
   \vfill
 
-  \begin{minipage}{.28\textwidth}
-    Schematic mass spring damper
+  \begin{minipage}{.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=stealth]
+        \path[pattern={Lines[angle=45,distance={8pt/sqrt(2)}]}] (-2, 5) edge ++(4,0) rectangle ++ (4, 0.5);
+
+        \draw[decorate,decoration={coil, segment length=5pt, aspect=0.7, amplitude=4pt,
+            pre=lineto, pre length=5mm, post=lineto, post length=5mm}] (0.5, 5) -- (0.5, 2.5)
+        node[left, draw, minimum size=1cm, fill=blue!20] (m) {$m$};
+
+        \draw[] (-0.5, 5) -- (-0.5, 4) {};
+        \draw[] (-0.25, 4) -- (-0.75, 4) {};
+
+        \draw[] (-0.5, 3.75) -- (-0.5, 2.5) {};
+        \draw[] (-0.25, 3.75) -- (-0.75, 3.75) {};
+
+        \draw[] (-0.25, 3.75) -- (-0.25, 4.25) {};
+        \draw[] (-0.75, 3.75) -- (-0.75, 4.25) {};
+
+        \draw[blue] (m.center-|0, 0) ++ (0, 1) -- ++ (-2, 0)
+        edge[<-,edge label'=$x$,shorten >=1pt] (m.center-|-2, 0)
+        (m.center-|0, 0) ++ (0, -1) -- ++ (-2, 0)
+        edge[<-,edge label=$-x$,shorten >=1pt] (m.center-|-2, 0);
+        %(m.east) edge[dashed] (m.east-|2, 0);
+        %(m.east-|2, 0) node[right] {Equilibrium};
+    \end{tikzpicture}
   \end{minipage}%
   \hfill
-  \begin{minipage}{.68\textwidth}
-    Impulse response
+  \begin{minipage}{.48\textwidth}
+    \centering
+
+    \Large
+    \[
+    \begin{aligned}
+      \dfrac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ v \end{bmatrix}
+      & =
+      \begin{bmatrix}
+        0 & 1 \\
+        -1 & -2\zeta
+      \end{bmatrix}
+      \begin{bmatrix} x \\ v \end{bmatrix}
+      +
+      \begin{bmatrix}
+        0 \\ 1
+      \end{bmatrix} u \\
+      y & = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x \\ v \end{bmatrix}
+    \end{aligned}
+    \]
+
   \end{minipage}
 
   \vfill
 \end{frame}
+
+\begin{frame}
+  \vfill
+  \centering
+  \includegraphics[width=\textwidth]{pendulum_impulse_response}
+  \vfill
+\end{frame}
+
+}
 
 \begin{frame}{EigenRealization Algorithm}
   \vfill
@@ -1838,9 +1962,71 @@
   \vfill
 \end{frame}
 
+{
+\setbeamercolor*{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=black}
+\usebeamercolor[fg]{normal text}
+
 \begin{frame}
-  Mass spring damper example
+  \vfill
+
+  \begin{minipage}{.48\textwidth}
+    \centering
+    \begin{tikzpicture}[>=stealth]
+        \path[pattern={Lines[angle=45,distance={8pt/sqrt(2)}]}] (-2, 5) edge ++(4,0) rectangle ++ (4, 0.5);
+
+        \draw[decorate,decoration={coil, segment length=5pt, aspect=0.7, amplitude=4pt,
+            pre=lineto, pre length=5mm, post=lineto, post length=5mm}] (0.5, 5) -- (0.5, 2.5)
+        node[left, draw, minimum size=1cm, fill=blue!20] (m) {$m$};
+
+        \draw[] (-0.5, 5) -- (-0.5, 4) {};
+        \draw[] (-0.25, 4) -- (-0.75, 4) {};
+
+        \draw[] (-0.5, 3.75) -- (-0.5, 2.5) {};
+        \draw[] (-0.25, 3.75) -- (-0.75, 3.75) {};
+
+        \draw[] (-0.25, 3.75) -- (-0.25, 4.25) {};
+        \draw[] (-0.75, 3.75) -- (-0.75, 4.25) {};
+
+        \draw[blue] (m.center-|0, 0) ++ (0, 1) -- ++ (-2, 0)
+        edge[<-,edge label'=$x$,shorten >=1pt] (m.center-|-2, 0)
+        (m.center-|0, 0) ++ (0, -1) -- ++ (-2, 0)
+        edge[<-,edge label=$-x$,shorten >=1pt] (m.center-|-2, 0);
+        %(m.east) edge[dashed] (m.east-|2, 0);
+        %(m.east-|2, 0) node[right] {Equilibrium};
+    \end{tikzpicture}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+    \centering
+
+      \includegraphics[width=.8\textwidth]{Hankel_matrix_pendulum}
+
+      \vfill
+
+      \[
+      \boldsymbol{\Sigma}
+      =
+      \begin{bmatrix}
+        27.68 & 22.62 & 0 & 0 & \cdots
+      \end{bmatrix}
+      \]
+
+  \end{minipage}
+
+  \vfill
 \end{frame}
+
+\begin{frame}
+  \centering
+  \vfill
+
+  \includegraphics[width=\textwidth]{pendulum_identified_response}
+
+  \vfill
+\end{frame}
+
+}
 
 \begin{frame}
   Cylinder flow example
