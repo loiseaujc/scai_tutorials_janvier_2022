@@ -74,21 +74,6 @@
   \titlepage
 \end{frame}
 
-%% \begin{frame}[t, c]{blabla}
-%%   \vfill
-
-%%   \centering
-
-%%   This is a test
-
-%%   \vfill
-
-%%   \begin{tcolorbox}[enhanced, coltitle=black, coltext=white, colback=black, title=My title, frame style tile={width=\paperwidth}{background.jpg}]
-%%     Hello
-%% \end{tcolorbox}
-
-%%   \vfill
-%% \end{frame}
 
 \begin{frame}
   \vfill
@@ -109,6 +94,25 @@
   \begin{minipage}{.28\textwidth}
     \includegraphics[width=\textwidth]{myself}
   \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  Given training data $\bm{y}_i = \bm{f}(\bm{x}_i)$ where $\bm{f}$ is unknown, we want to \textbf{learn} a function $\hat{\bm{f}}$ such that
+
+  \bigskip
+{\Large
+  \[
+  \minimize_{\hat{\bm{f}} \in \mathcal{F}} \quad \| \bm{f}(\bm{x}) - \hat{\bm{f}}(\bm{x}) \|
+  \]
+}
+
+  \bigskip
+
+  where $\mathcal{F}$ is a particular \emph{class} of models.
 
   \vfill
 \end{frame}
@@ -387,32 +391,6 @@
 
   \vfill
 \end{frame}
-
-%% \begin{frame}[fragile]
-%%   \vfill
-%%   \begin{minipage}{.48\textwidth}
-%%     \Large
-%%     \[
-%%     \sigma_i^{-1}
-%%     =
-%%     \begin{cases}
-%%       \dfrac{1}{\sigma_i} \quad \text{if} \quad \sigma_i > \varepsilon \\
-%%       0 \quad \text{otherwise.}
-%%     \end{cases}
-%%     \]
-%%   \end{minipage}%
-%%   \hfill
-%%   \begin{minipage}{.48\textwidth}
-%%     \begin{itemize}
-%%       \item \verb+np.linalg.lstsq(A, b)+
-
-%%       \bigskip
-
-%%       \item \verb+A\b+
-%%     \end{itemize}
-%%   \end{minipage}
-%%   \vfill
-%% \end{frame}
 
 \begin{frame}{Low-rank approximation}
   \centering
@@ -760,9 +738,7 @@
   \hfill
   \begin{minipage}{.38\textwidth}
     \textcolor{black}{
-
     The whole dataset can be correctly approximated using only 500 so-called eigenfaces.
-
     }
   \end{minipage}
   \vfill
@@ -906,6 +882,63 @@
 \end{frame}
 
 }
+
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item Relies on extremely efficient numerical linear algebra techniques.
+
+      \bigskip
+
+      \item The singular value distribution provides a simple diagnostic to estimate the dimensional of the embedding Euclidean space.
+
+      \bigskip
+
+      \item Component analysis is well understood from a statistical point of view and benefits from good properties.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{Green} \bm{+}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item The dimension inferred from the singular value distribution tends to over-estimate the intrinsic dimension of the underlying low-dimensional manifold.
+
+      \bigskip
+
+      \item This is directly related to the fact the linear dimensionality reduction techniques do not account for \emph{nonlinear correlations}, only linear ones..
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{red} \bm{-}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
 
 \section{Optimal sensor placement}
 \begin{frame}
@@ -1134,6 +1167,57 @@
 
 \end{frame}
 
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item Relies on extremely efficient numerical linear algebra techniques.
+
+      \bigskip
+
+      \item Greedy solution to an otherwise intractable combinatorial problem.
+
+      \bigskip
+
+      \item Relevant in many situations and benefits from good empirical performances.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{Green} \bm{+}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item No easy way to estimate how far from the optimum the greedy solution is.
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{red} \bm{-}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+
 \section{State estimation and low-rank sensing}
 \begin{frame}
   \sectionpage
@@ -1279,7 +1363,7 @@
   \vfill
   \begin{minipage}{.48\textwidth}
     \centering
-    \underline{\textbf{Undertermined problem}}
+    \underline{\textbf{Underdetermined problem}}
   \end{minipage}%
   \hfill
   \begin{minipage}{.48\textwidth}
@@ -1353,243 +1437,527 @@
 \end{frame}
 }
 
+\begin{frame}
+  \vfill
 
-\section{Reduced-order modeling}
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item Low-rank sensing benefits from strong theoretical guarantees.
+
+      \bigskip
+
+      \item Relies on simple yet efficient numerical procedures, both during the training and deployment stages.
+
+      \bigskip
+
+      \item Requires much less data than naïve deep learning alternatives.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{Green} \bm{+}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item Data needs to be standardized and characterized by an underlying low-rank structure.
+
+      \bigskip
+
+      \item The state estimator is a \textbf{static map}.
+      It does not account for the dynamics (if they exist) of the generating process.
+
+      \bigskip
+
+      \item The measurement equation needs to be (approximately) linear.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{red} \bm{-}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\section{Low-rank structures and sparse sensing for classification}
 \begin{frame}
   \sectionpage
 \end{frame}
 
 \begin{frame}
-  \centering
   \vfill
-  \includegraphics[width=\textwidth]{dns_snapshot}
+  \begin{minipage}{.58\textwidth}
+    \centering
+    Is it a cat or a dog ?
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.38\textwidth}
+
+  \end{minipage}
   \vfill
 \end{frame}
 
+{
+\setbeamercolor*{background canvas}{bg=white}
+
+\begin{frame}
+
+\end{frame}
+}
 
 \begin{frame}
   \vfill
 
-  {
-  \Large
-  \[
-  \begin{aligned}
-    \dfrac{\mathrm{d} \bm{x}}{\mathrm{d}t} & = \tikzmarknode{a} {\highlightdark{red}{$\bm{A}$}} \bm{x} + \tikzmarknode{b} {\highlightdark{blue}{$\bm{B}$}} \bm{u} \\
-    \bm{y} & = \tikzmarknode{c} {\highlightdark{Green}{$\bm{C}$}} \bm{x} + \tikzmarknode{d} {\highlightdark{Plum}{$\bm{D}$}} \bm{u}
-  \end{aligned}
-  \]
-  }
-
-  \begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
-
-    \path (a.north) ++ (0, 2em) node[anchor=south east, color=red!67] (dynamics){Natural dynamics};
-    \draw [color=red!87] (a.north) |- ([xshift=0.3ex, color=blue] dynamics.south west);
-
-    \path (b.north) ++ (0, 2em) node[anchor=south west, color=blue!67] (actuators){Actuators};
-    \draw [color=blue!87] (b.north) |- ([xshift=0.3ex, color=blue] actuators.south east);
-
-    \path (c.south) ++ (0, -2em) node[anchor=north east, color=Green!67] (obs){Measurements};
-    \draw [color=Green!87] (c.south) |- ([xshift=-0.3ex, color=Green] obs.south west);
-
-    \path (d.south) ++ (0, -2em) node[anchor=north west, color=Plum!67] (feed){Feedthrough};
-    \draw [color=Plum!87] (d.south) |- ([xshift=-0.3ex, color=Plum] feed.south east);
-
-  \end{tikzpicture}
-
-  \vfill
-\end{frame}
-
-\begin{frame}
-  \vfill
-  \centering
-
-  \underline{\textbf{Controlability Gramian}}
-
-  \Large
-  {
-    \[
-    \bm{W}_{\mathcal{C}} = \displaystyle \int_0^{\infty} e^{\tau \bm{A}} \bm{BB}^* e^{\tau \bm{A}^*} \ \mathrm{d}\tau
-    \]
-  }
-
-  \vfill
-\end{frame}
-
-\begin{frame}
-  \vfill
-  \centering
-
-  \underline{\textbf{Observability Gramian}}
-
-  \Large
-  {
-    \[
-    \bm{W}_{\mathcal{O}} = \displaystyle \int_0^{\infty} e^{\tau \bm{A}^*} \bm{C}^* \bm{C} e^{\tau \bm{A}} \ \mathrm{d}\tau
-    \]
-  }
-
-  \vfill
-\end{frame}
-
-
-\begin{frame}
-  \vfill
-
-  \begin{tcolorbox}[
-    enhanced,
-    coltitle=black,
-    coltext=white,
-    colback=black,
-    title=\textbf{Balancing transform / Balanced tuncation},
-    frame style tile={width=\paperwidth}{background.jpg}
-    ]
-
-    \medskip
-    \Large
+  \begin{minipage}{.58\textwidth}
+    \centering
+    \underline{\textbf{Linear classifier}}
 
     \[
-    \begin{bmatrix}
-      \bm{0} & \bm{I} \\
-      \bm{I} & \bm{0}
-    \end{bmatrix}
-    \begin{bmatrix}
-      \bm{P} \\ \bm{Q}
-    \end{bmatrix}
-    \boldsymbol{\Sigma}
-      =
-    \begin{bmatrix}
-      \bm{W}_{\mathcal{O}} & \bm{0} \\
-      \bm{0} & \bm{W}_{\mathcal{C}}
-    \end{bmatrix}
-    \begin{bmatrix}
-      \bm{P} \\ \bm{Q}
-    \end{bmatrix}
+    \textrm{sign} \left( \bm{w}^T \bm{x} + b \right)
+    =
+    \begin{cases}
+      1 \quad \textrm{then it is a cat,} \\
+      -1 \quad \textrm{otherwise a dog.}
+    \end{cases}
     \]
-
-    \medskip
-  \end{tcolorbox}
-
-  \vfill
-
-  BT discards modes which are highly controlable but poorly observable, and vice versa.
-  The transformed system is \textbf{balanced}.
-  Its Gramians are given by $\hat{\bm{W}}_{\mathcal{O}} = \hat{\bm{W}}_{\mathcal{C}} = \boldsymbol{\Sigma}$ where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
+  \end{minipage}
 
   \vfill
 \end{frame}
 
 \begin{frame}
-  \vfill
-
-  \centering
-  \underline{\textbf{Balanced Proper Orthogonal Decomposition}}
-
-  \vfill
-  \begin{overprint}
-    \onslide<1>
-    \begin{enumerate}
-      \item[1.] For each actuator, compute the corresponding impulse reponse
-      %
-      \[
-      \bm{X}_i
-      =
-      \begin{bmatrix}
-        \bm{B}_i & e^{\Delta t \bm{A}} \bm{B}_i & e^{2\Delta t \bm{A}} \bm{B}_i & \cdots & e^{n \Delta t \bm{A}} \bm{B}_i
-      \end{bmatrix}
-      \]
-      %
-      and assemble the data matrix $\bm{X} = \begin{bmatrix} \bm{X}_1 & \bm{X}_2 & \cdots & \bm{X}_p \end{bmatrix}$.
-    \end{enumerate}
-
-    \onslide<2>
-    \begin{enumerate}
-      \item[2.] For each sensor, compute the corresponding \textbf{adjoint} impulse reponse
-      %
-      \[
-      \bm{Y}_i
-      =
-      \begin{bmatrix}
-        \bm{C}^*_i & e^{\Delta t \bm{A}^*} \bm{C}^*_i & e^{2\Delta t \bm{A}^*} \bm{C}^*_i & \cdots & e^{n \Delta t \bm{A}^*} \bm{C}_i^*
-      \end{bmatrix}
-      \]
-      %
-      and assemble the data matrix $\bm{Y} = \begin{bmatrix} \bm{Y}_1 & \bm{Y}_2 & \cdots & \bm{Y}_q \end{bmatrix}$.
-    \end{enumerate}
-
-    \onslide<3>
-    \begin{enumerate}
-      \item[3.] Compute the SVD of $\bm{Y}^T \bm{X}$
-      %
-      \[
-      \bm{Y}^T \bm{X} = \bm{U} \boldsymbol{\Sigma} \bm{V}^T
-      \]
-      %
-      where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
-    \end{enumerate}
-
-    \onslide<4>
-    \begin{enumerate}
-      \item[4.] Compute the first $r$ columns and rows of the balancing transform as
-      %
-      \[
-      \bm{P} = \bm{X} \bm{V} \boldsymbol{\Sigma}^{-\frac12} \quad \text{and} \quad \bm{Q} = \bm{Y} \bm{U} \boldsymbol{\Sigma}^{-\frac12}
-      \]
-      %
-      and proceed with the construction of the reduced-order model.
-    \end{enumerate}
-
-  \end{overprint}
-
-  \vfill
+  Eigenpets
 \end{frame}
+
+{
+\setbeamercolor*{background canvas}{bg=white}
+
+\begin{frame}
+  Classifier
+\end{frame}
+}
 
 \begin{frame}
   \vfill
-
-  \centering
-  \underline{\textbf{Petrov-Galerkin projection}}
-
-  \bigskip
-
-  \begin{overprint}
-    \onslide<1>
+  \begin{minipage}{.48\textwidth}
+    $\bm{w} \in \mathbb{R}^{20}$, hence only 20 pixels would be necessary to classify the image.
+    But how to choose these most informative pixels ?
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.48\textwidth}
     \Large
     \[
     \begin{aligned}
-      \dfrac{\mathrm{d} \hat{\bm{x}}}{\mathrm{d}t} & = \hat{\bm{A}} \hat{\bm{x}} + \hat{\bm{B}} \bm{u} \\
-      \hat{\bm{y}} & = \hat{\bm{C}} \hat{\bm{x}} + \hat{\bm{D}} \bm{u}
+      \minimize_{\bm{s}} & \quad \| \bm{s} \|_1 \\
+      \subto & \quad \bm{U}^T \bm{s} = \bm{w}
     \end{aligned}
     \]
+  \end{minipage}
+  \vfill
+\end{frame}
 
-    \onslide<2>
-    \Large
-    \[\left(
-    \begin{array}{c|c}
-      \bm{Q}^T \bm{A} \bm{P} & \bm{Q}^T \bm{B} \\
-      \hline
-      \bm{C} \bm{P} & \bm{D}
-    \end{array}
-    \right)
+{
+\setbeamercolor*{background canvas}{bg=white}
+
+\begin{frame}
+  Selected pixels
+\end{frame}
+
+\begin{frame}
+  Density map of selected pixels
+\end{frame}
+
+\begin{frame}
+  Classifier
+\end{frame}
+
+}
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{Green} \bm{+}
     \]
-
-  \end{overprint}
+  \end{minipage}
 
   \vfill
 \end{frame}
 
+
 \begin{frame}
-  Example for the shear-driven cavity
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{red} \bm{-}
+    \]
+  \end{minipage}
+
+  \vfill
 \end{frame}
 
 
-
-
-
-
-
-
-
-
+% % \section{Reduced-order modeling}
+% % \begin{frame}
+% %   \sectionpage
+% % \end{frame}
+% %
+% % \begin{frame}
+% %   \centering
+% %   \vfill
+% %   \includegraphics[width=\textwidth]{dns_snapshot}
+% %   \vfill
+% % \end{frame}
+% %
+% % {
+% %
+% % \tikzstyle{block} = [draw, fill=blue!67, rectangle,
+% %     minimum height=3em, minimum width=6em]
+% % \tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+% % \tikzstyle{input} = [coordinate]
+% % \tikzstyle{output} = [coordinate]
+% %
+% % \begin{frame}
+% %   \vfill
+% %   \centering
+% %
+% %   % The block diagram code is probably more verbose than necessary
+% %   \begin{tikzpicture}[auto, node distance=4cm, >=stealth]
+% %
+% %     \node[input, name=input] {};
+% %
+% %       \node [
+% %         block,
+% %         right of=intput,
+% %         label=below:Plant,
+% %       ] (system) {
+% %             \[
+% %             \begin{aligned}
+% %               \dot{\bm{x}} & = \bm{f}(\bm{x}, \bm{u}) \\
+% %               \bm{y} & = \bm{g}(\bm{x}, \bm{u})
+% %             \end{aligned}
+% %             \]
+% %             };
+% %
+% %       \node[output, name=output, right of=system] {};
+% %
+% %       \node [
+% %       block,
+% %       below of=system,
+% %       label=below:Controller,
+% %       ] (controller) {
+% %         $\bm{u} = \mathcal{K}(\bm{y})$
+% %       };
+% %
+% %       \draw[-] (system.east) -- (output) {} node [midway, above] {$\bm{y}$};
+% %
+% %       \draw[-stealth] (output.center) |- (controller.east);
+% %
+% %       \draw[-] (controller.west) -| (input.center) ;
+% %
+% %       \draw[-stealth] (input) -- (system.west) {} node [midway, above] {$\bm{u}$};
+% %
+% %
+% %       % We start by placing the blocks
+% %       % \node [input, name=input] {};
+% %       % \node [sum, right of=input] (sum) {};
+% %       % \node [block, right of=sum] (controller) {Controller};
+% %       % \node [
+% %       %   block,
+% %       %   right of=controller,
+% %       %   pin={[pinstyle]above:Disturbances},
+% %       %   node distance=5cm,
+% %       %   label=below:Plant,
+% %       %   ] (system) {
+% %       %         \[
+% %       %         \begin{aligned}
+% %       %           \dot{\bm{x}} & = \bm{f}(\bm{x}, \bm{u}) \\
+% %       %           \bm{y} & = \bm{g}(\bm{x}, \bm{u})
+% %       %         \end{aligned}
+% %       %         \]
+% %       %         };
+% %       %
+% %       % % We draw an edge between the controller and system block to
+% %       % % calculate the coordinate u. We need it to place the measurement block.
+% %       % \draw [->] (controller) -- node[name=u] {$u$} (system);
+% %       % \node [output, right of=system] (output) {};
+% %       % \node [block, below of=u] (measurements) {Measurements};
+% %       %
+% %       % % Once the nodes are placed, connecting them is easy.
+% %       % \draw [draw,->] (input) -- node {$r$} (sum);
+% %       % \draw [->] (sum) -- node {$e$} (controller);
+% %       % \draw [->] (system) -- node [name=y] {$y$}(output);
+% %       % \draw [->] (y) |- (measurements);
+% %       % \draw [->] (measurements) -| node[pos=0.99] {$-$}
+% %       %     node [near end] {$y_m$} (sum);
+% %
+% %   \end{tikzpicture}
+% %
+% % \end{frame}
+% % }
+% %
+% % \begin{frame}
+% %   \vfill
+% %
+% %   {
+% %   \Large
+% %   \[
+% %   \begin{aligned}
+% %     \dfrac{\mathrm{d} \bm{x}}{\mathrm{d}t} & = \tikzmarknode{a} {\highlightdark{red}{$\bm{A}$}} \bm{x} + \tikzmarknode{b} {\highlightdark{blue}{$\bm{B}$}} \bm{u} \\
+% %     \bm{y} & = \tikzmarknode{c} {\highlightdark{Green}{$\bm{C}$}} \bm{x} + \tikzmarknode{d} {\highlightdark{Plum}{$\bm{D}$}} \bm{u}
+% %   \end{aligned}
+% %   \]
+% %   }
+% %
+% %   \begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
+% %
+% %     \path (a.north) ++ (0, 2em) node[anchor=south east, color=red!67] (dynamics){Natural dynamics};
+% %     \draw [color=red!87] (a.north) |- ([xshift=0.3ex, color=blue] dynamics.south west);
+% %
+% %     \path (b.north) ++ (0, 2em) node[anchor=south west, color=blue!67] (actuators){Actuators};
+% %     \draw [color=blue!87] (b.north) |- ([xshift=0.3ex, color=blue] actuators.south east);
+% %
+% %     \path (c.south) ++ (0, -2em) node[anchor=north east, color=Green!67] (obs){Measurements};
+% %     \draw [color=Green!87] (c.south) |- ([xshift=-0.3ex, color=Green] obs.south west);
+% %
+% %     \path (d.south) ++ (0, -2em) node[anchor=north west, color=Plum!67] (feed){Feedthrough};
+% %     \draw [color=Plum!87] (d.south) |- ([xshift=-0.3ex, color=Plum] feed.south east);
+% %
+% %   \end{tikzpicture}
+% %
+% %   \vfill
+% % \end{frame}
+% %
+% % \begin{frame}
+% %   \vfill
+% %   \centering
+% %
+% %   \underline{\textbf{Controlability Gramian}}
+% %
+% %   \Large
+% %   {
+% %     \[
+% %     \bm{W}_{\mathcal{C}} = \displaystyle \int_0^{\infty} e^{\tau \bm{A}} \bm{BB}^* e^{\tau \bm{A}^*} \ \mathrm{d}\tau
+% %     \]
+% %   }
+% %
+% %   \vfill
+% % \end{frame}
+% %
+% % \begin{frame}
+% %   \vfill
+% %   \centering
+% %
+% %   \underline{\textbf{Observability Gramian}}
+% %
+% %   \Large
+% %   {
+% %     \[
+% %     \bm{W}_{\mathcal{O}} = \displaystyle \int_0^{\infty} e^{\tau \bm{A}^*} \bm{C}^* \bm{C} e^{\tau \bm{A}} \ \mathrm{d}\tau
+% %     \]
+% %   }
+% %
+% %   \vfill
+% % \end{frame}
+% %
+% %
+% % \begin{frame}
+% %   \vfill
+% %
+% %   \begin{tcolorbox}[
+% %     enhanced,
+% %     coltitle=black,
+% %     coltext=white,
+% %     colback=black,
+% %     title=\textbf{Balancing transform / Balanced tuncation},
+% %     frame style tile={width=\paperwidth}{background.jpg}
+% %     ]
+% %
+% %     \medskip
+% %     \Large
+% %
+% %     \[
+% %     \begin{bmatrix}
+% %       \bm{0} & \bm{I} \\
+% %       \bm{I} & \bm{0}
+% %     \end{bmatrix}
+% %     \begin{bmatrix}
+% %       \bm{P} \\ \bm{Q}
+% %     \end{bmatrix}
+% %     \boldsymbol{\Sigma}
+% %       =
+% %     \begin{bmatrix}
+% %       \bm{W}_{\mathcal{O}} & \bm{0} \\
+% %       \bm{0} & \bm{W}_{\mathcal{C}}
+% %     \end{bmatrix}
+% %     \begin{bmatrix}
+% %       \bm{P} \\ \bm{Q}
+% %     \end{bmatrix}
+% %     \]
+% %
+% %     \medskip
+% %   \end{tcolorbox}
+% %
+% %   \vfill
+% %
+% %   BT discards modes which are highly controlable but poorly observable, and vice versa.
+% %   The transformed system is \textbf{balanced}.
+% %   Its Gramians are given by $\hat{\bm{W}}_{\mathcal{O}} = \hat{\bm{W}}_{\mathcal{C}} = \boldsymbol{\Sigma}$ where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
+% %
+% %   \vfill
+% % \end{frame}
+% %
+% % \begin{frame}
+% %   \vfill
+% %
+% %   \centering
+% %   \underline{\textbf{Balanced Proper Orthogonal Decomposition}}
+% %
+% %   \vfill
+% %   \begin{overprint}
+% %     \onslide<1>
+% %     \begin{enumerate}
+% %       \item[1.] For each actuator, compute the corresponding impulse reponse
+% %       %
+% %       \[
+% %       \bm{X}_i
+% %       =
+% %       \begin{bmatrix}
+% %         \bm{B}_i & e^{\Delta t \bm{A}} \bm{B}_i & e^{2\Delta t \bm{A}} \bm{B}_i & \cdots & e^{n \Delta t \bm{A}} \bm{B}_i
+% %       \end{bmatrix}
+% %       \]
+% %       %
+% %       and assemble the data matrix $\bm{X} = \begin{bmatrix} \bm{X}_1 & \bm{X}_2 & \cdots & \bm{X}_p \end{bmatrix}$.
+% %     \end{enumerate}
+% %
+% %     \onslide<2>
+% %     \begin{enumerate}
+% %       \item[2.] For each sensor, compute the corresponding \textbf{adjoint} impulse reponse
+% %       %
+% %       \[
+% %       \bm{Y}_i
+% %       =
+% %       \begin{bmatrix}
+% %         \bm{C}^*_i & e^{\Delta t \bm{A}^*} \bm{C}^*_i & e^{2\Delta t \bm{A}^*} \bm{C}^*_i & \cdots & e^{n \Delta t \bm{A}^*} \bm{C}_i^*
+% %       \end{bmatrix}
+% %       \]
+% %       %
+% %       and assemble the data matrix $\bm{Y} = \begin{bmatrix} \bm{Y}_1 & \bm{Y}_2 & \cdots & \bm{Y}_q \end{bmatrix}$.
+% %     \end{enumerate}
+% %
+% %     \onslide<3>
+% %     \begin{enumerate}
+% %       \item[3.] Compute the SVD of $\bm{Y}^T \bm{X}$
+% %       %
+% %       \[
+% %       \bm{Y}^T \bm{X} = \bm{U} \boldsymbol{\Sigma} \bm{V}^T
+% %       \]
+% %       %
+% %       where $\boldsymbol{\Sigma}$ are the \emph{Hankel singular values} of the system.
+% %     \end{enumerate}
+% %
+% %     \onslide<4>
+% %     \begin{enumerate}
+% %       \item[4.] Compute the first $r$ columns and rows of the balancing transform as
+% %       %
+% %       \[
+% %       \bm{P} = \bm{X} \bm{V} \boldsymbol{\Sigma}^{-\frac12} \quad \text{and} \quad \bm{Q} = \bm{Y} \bm{U} \boldsymbol{\Sigma}^{-\frac12}
+% %       \]
+% %       %
+% %       and proceed with the construction of the reduced-order model.
+% %     \end{enumerate}
+% %
+% %   \end{overprint}
+% %
+% %   \vfill
+% % \end{frame}
+% %
+% % \begin{frame}
+% %   \vfill
+% %
+% %   \centering
+% %   \underline{\textbf{Petrov-Galerkin projection}}
+% %
+% %   \bigskip
+% %
+% %   \begin{overprint}
+% %     \onslide<1>
+% %     \Large
+% %     \[
+% %     \begin{aligned}
+% %       \dfrac{\mathrm{d} \hat{\bm{x}}}{\mathrm{d}t} & = \hat{\bm{A}} \hat{\bm{x}} + \hat{\bm{B}} \bm{u} \\
+% %       \hat{\bm{y}} & = \hat{\bm{C}} \hat{\bm{x}} + \hat{\bm{D}} \bm{u}
+% %     \end{aligned}
+% %     \]
+% %
+% %     \onslide<2>
+% %     \Large
+% %     \[\left(
+% %     \begin{array}{c|c}
+% %       \bm{Q}^T \bm{A} \bm{P} & \bm{Q}^T \bm{B} \\
+% %       \hline
+% %       \bm{C} \bm{P} & \bm{D}
+% %     \end{array}
+% %     \right)
+% %     \]
+% %
+% %   \end{overprint}
+% %
+% %   \vfill
+% % \end{frame}
+% %
+% % \begin{frame}
+% %   Example for the shear-driven cavity
+% % \end{frame}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
 \section{System identification}
 \begin{frame}
   \sectionpage
@@ -1601,6 +1969,104 @@
   \includegraphics[width=\textwidth]{dns_snapshot}
   \vfill
 \end{frame}
+
+{
+
+\tikzstyle{block} = [draw, fill=blue!67, rectangle,
+    minimum height=3em, minimum width=6em]
+\tikzstyle{sum} = [draw, fill=blue!20, circle, node distance=1cm]
+\tikzstyle{input} = [coordinate]
+\tikzstyle{output} = [coordinate]
+
+\begin{frame}
+  \vfill
+  \centering
+
+  % The block diagram code is probably more verbose than necessary
+  \begin{tikzpicture}[auto, node distance=4cm, >=stealth]
+
+    \node[input, name=input] {};
+
+      \node [
+        block,
+        right of=input,
+        label=below:Plant,
+      ] (system) {
+            \Large
+            \textbf{?}
+            };
+
+      \node[output, name=output, right of=system] {};
+
+      \node [
+      block,
+      below of=system,
+      label=below:Controller,
+      ] (controller) {
+        $\bm{u} = \mathcal{K}(\bm{y})$
+      };
+
+      \draw[-] (system.east) -- (output) {} node [midway, above] {$\bm{y}$};
+
+      \draw[-stealth] (output.center) |- (controller.east);
+
+      \draw[-] (controller.west) -| (input.center) ;
+
+      \draw[-stealth] (input) -- (system.west) {} node [midway, above] {$\bm{u}$};
+
+
+      % We start by placing the blocks
+      % \node [input, name=input] {};
+      % \node [sum, right of=input] (sum) {};
+      % \node [block, right of=sum] (controller) {Controller};
+      % \node [
+      %   block,
+      %   right of=controller,
+      %   pin={[pinstyle]above:Disturbances},
+      %   node distance=5cm,
+      %   label=below:Plant,
+      %   ] (system) {
+      %         \[
+      %         \begin{aligned}
+      %           \dot{\bm{x}} & = \bm{f}(\bm{x}, \bm{u}) \\
+      %           \bm{y} & = \bm{g}(\bm{x}, \bm{u})
+      %         \end{aligned}
+      %         \]
+      %         };
+      %
+      % % We draw an edge between the controller and system block to
+      % % calculate the coordinate u. We need it to place the measurement block.
+      % \draw [->] (controller) -- node[name=u] {$u$} (system);
+      % \node [output, right of=system] (output) {};
+      % \node [block, below of=u] (measurements) {Measurements};
+      %
+      % % Once the nodes are placed, connecting them is easy.
+      % \draw [draw,->] (input) -- node {$r$} (sum);
+      % \draw [->] (sum) -- node {$e$} (controller);
+      % \draw [->] (system) -- node [name=y] {$y$}(output);
+      % \draw [->] (y) |- (measurements);
+      % \draw [->] (measurements) -| node[pos=0.99] {$-$}
+      %     node [near end] {$y_m$} (sum);
+
+  \end{tikzpicture}
+
+\end{frame}
+}
+
+\begin{frame}
+  \vfill
+  \centering
+
+  \underline{\textbf{Convolution model}}
+
+  \Large
+  \[
+  \bm{y}_i = \bm{f} \left( \bm{u}_i, \bm{u}_{i-1}, \bm{u}_{i-2}, \cdots \right)
+  \]
+
+  \vfill
+\end{frame}
+
 
 \begin{frame}
   \vfill
@@ -1634,69 +2100,96 @@
   \vfill
 \end{frame}
 
-\begin{frame}%{Observability and Controlability}
+\begin{frame}
   \vfill
+  \centering
 
-  \begin{minipage}{.28\textwidth}
-    \Large
-
-    \[
-    \mathcal{O}_k
-    =
-    \begin{bmatrix}
-      \bm{C} \\ \bm{CA} \\ \bm{CA}^2 \\ \bm{CA}^3 \\ \vdots \\ \bm{CA}^{k-1}
-    \end{bmatrix}
-    \]
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.68\textwidth}
-    \Large
-
-    \[
-    \mathcal{C}_k
-    =
-    \begin{bmatrix}
-      \bm{B} & \bm{AB} & \bm{A}^2 \bm{B} & \bm{A}^3 \bm{B} & \cdots & \bm{A}^{k-1} \bm{B}
-    \end{bmatrix}
-    \]
-  \end{minipage}
-
-  \vfill
-
-  \begin{minipage}{.28\textwidth}
-    \centering
-    \underline{\textbf{Observability}}
-  \end{minipage}%
-  \hfill
-  \begin{minipage}{.68\textwidth}
-    \centering
-    \underline{\textbf{Controlability}}
-  \end{minipage}
+  \large
+  \begin{tabular}{c|r|r}
+    Input $\bm{u}_i$ & State $\bm{x}_i$ & Output $\bm{y}_i$ \\
+    \hline
+    $\bm{u}_0$ & $\bm{0}$ & $\bm{Du}_0$ \\
+    $\bm{u}_1$ & $\bm{Bu}_0$ & $\bm{CBu}_0 + \bm{Du}_1$ \\
+    $\bm{u}_2$ & $\bm{ABu}_0 + \bm{Bu}_1$ & $\bm{CABu}_0 + \bm{CBu}_1 + \bm{Du}_2$ \\
+    $\bm{u}_3$ & $\bm{A}^2 \bm{Bu}_0 + \bm{ABu}_1 + \bm{Bu}_2$ & $\bm{CA}^2 \bm{Bu}_0 + \bm{CABu}_1 + \bm{CBu}_2 + \bm{Du}_3$ \\
+    $\vdots$ & $\vdots$ & $\vdots$ \\
+    $\bm{u}_k$ & $\displaystyle \sum_{i=1}^k \bm{A}^{k-i} \bm{Bu}_{k-i}$ & $\displaystyle \sum_{i=1}^k \bm{CA}^{k-i} \bm{Bu}_{k-i} + \bm{Du}_k$
+  \end{tabular}
 
   \vfill
 \end{frame}
 
 \begin{frame}
-  \centering
   \vfill
 
-  {\Large
-  \[
-    \mathcal{H}_k
-    =
-    \begin{bmatrix}
-      \bm{D} & \bm{CB} & \bm{CAB} & \bm{CA}^2\bm{B} & \bm{CA}^3 \bm{B} & \cdots & \bm{CA}^{k-1} \bm{B}
-    \end{bmatrix}
-  \]
-  }
+    {\Large
+    \[
+    \tikzmarknode{a}{\highlightdark{red}{$\bm{y}(t)$}} = \tikzmarknode{c}{\highlightdark{Green}{$\bm{h}(t)$}} * \tikzmarknode{b}{\highlightdark{blue}{$\bm{u}(t)$}}
+    \]
+    }
 
-  \bigskip
+    \begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
 
-  \underline{\textbf{Markov parameters of the system}}
+      \path (a.north) ++ (0, 2em) node[anchor=south east, color=red!67] (U){Output};
+      \draw [color=red!87] (a.north) |- ([xshift=0.3ex, color=red] U.south west);
+
+      \path (b.south) ++ (0, -2em) node[anchor=north east, color=blue!67] (Sigma){Input};
+      \draw [color=blue!87] (b.south) |- ([xshift=-0.3ex, color=blue] Sigma.south west);
+
+      \path (c.north) ++ (0, 2em) node[anchor=south west, color=OliveGreen!67] (V){Unknown conv. kernel};
+      \draw [color=OliveGreen!87] (c.north) |- ([xshift=0.3ex, color=OliveGreen] V.south east);
+
+    \end{tikzpicture}
 
   \vfill
 \end{frame}
 
+\begin{frame}
+  \vfill
+  \Large
+  \[
+  \begin{bmatrix}
+    \bm{y}_0 \\ \bm{y}_1 \\ \bm{y}_2 \\ \bm{y}_3 \\ \vdots
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    \bm{u}_0 & \cdots \\
+    \bm{u}_1 & \bm{u}_0 & \cdots \\
+    \bm{u}_2 & \bm{u}_1 & \bm{u}_0 & \cdots \\
+    \bm{u}_3 & \bm{u}_2 & \bm{u}_1 & \bm{u}_0 & \cdots \\
+    \vdots & \ddots & \ddots & \ddots & \ddots
+  \end{bmatrix}
+  \begin{bmatrix}
+    \bm{D} \\ \bm{CB} \\ \bm{CAB} \\ \bm{CA}^2 \bm{B} \\ \bm{CA}^3 \bm{B} \\ \vdots
+  \end{bmatrix}
+  \]
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  {\Large
+  \[
+  \minimize_{\bm{h}} \quad \| \tikzmarknode{a}{\highlightdark{red}{$\bm{y}$}} - \tikzmarknode{b}{\highlightdark{blue}{$\mathcal{T}(\bm{u})$}} \tikzmarknode{c}{\highlightdark{Green}{$\bm{h}$}} \|_p + \mathcal{R}(\bm{h})
+  \]
+  }
+
+  \begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
+
+    \path (a.north) ++ (0, 2em) node[anchor=south east, color=red!67] (U){Output sequence};
+    \draw [color=red!87] (a.north) |- ([xshift=0.3ex, color=red] U.south west);
+
+    \path (b.south) ++ (0, -2em) node[anchor=north east, color=blue!67] (Sigma){Toeplitz matrix built \\ using the input sequence};
+    \draw [color=blue!87] (b.south) |- ([xshift=-0.3ex, color=blue] Sigma.south west);
+
+    \path (c.north) ++ (0, 2em) node[anchor=south west, color=OliveGreen!67] (V){Unknown conv. kernel};
+    \draw [color=OliveGreen!87] (c.north) |- ([xshift=0.3ex, color=OliveGreen] V.south east);
+
+  \end{tikzpicture}
+
+  \vfill
+\end{frame}
 
 {
 \setbeamercolor*{background canvas}{bg=white}
@@ -1760,29 +2253,236 @@
 \end{frame}
 
 \begin{frame}
-  \vfill
-  \centering
-  \includegraphics[width=\textwidth]{pendulum_impulse_response}
-  \vfill
+
 \end{frame}
 
 }
 
-\begin{frame}{EigenRealization Algorithm}
+\begin{frame}
   \vfill
 
-  \Large
-  \[
-  \bm{y}
-  =
-  \begin{bmatrix}
-    y_1 & y_2 & y_3 & y_4 & y_5 & y_6 & y_7 & y_8 & y_9 & y_{10}
-  \end{bmatrix}
-  \]
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item Relies on simple linear regression.
+
+      \bigskip
+
+      \item Easy to extend to nonlinear systems (e.g. LSTM)
+
+      \bigskip
+
+      \item Prior knowledge can be included through regularization or constraints.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{Green} \bm{+}
+    \]
+  \end{minipage}
 
   \vfill
 \end{frame}
 
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item The length of the convolution kernel is \emph{a priori} unknown.
+
+      \bigskip
+
+      \item The longer the kernel, the more data is needed to obtain converged estimates.
+
+      \bigskip
+
+      \item It is \emph{a priori} unrelated to the number of degrees of freedom in the system.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{red} \bm{-}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  {
+  \Large
+  \[
+  \begin{aligned}
+    \bm{x}_{i+1} & = \tikzmarknode{a} {\highlightdark{red}{$\bm{A}$}} \bm{x}_i + \tikzmarknode{b} {\highlightdark{blue}{$\bm{B}$}} \bm{u}_i \\
+    \bm{y}_{i} & = \tikzmarknode{c} {\highlightdark{Green}{$\bm{C}$}} \bm{x}_i + \tikzmarknode{d} {\highlightdark{Plum}{$\bm{D}$}} \bm{u}_i
+  \end{aligned}
+  \]
+  }
+
+  \begin{tikzpicture}[overlay, remember picture, >=stealth, nodes={align=left, inner ysep=1pt}, <-]
+
+    \path (a.north) ++ (0, 2em) node[anchor=south east, color=red!67] (dynamics){Natural dynamics};
+    \draw [color=red!87] (a.north) |- ([xshift=0.3ex, color=blue] dynamics.south west);
+
+    \path (b.north) ++ (0, 2em) node[anchor=south west, color=blue!67] (actuators){Actuators};
+    \draw [color=blue!87] (b.north) |- ([xshift=0.3ex, color=blue] actuators.south east);
+
+    \path (c.south) ++ (0, -2em) node[anchor=north east, color=Green!67] (obs){Measurements};
+    \draw [color=Green!87] (c.south) |- ([xshift=-0.3ex, color=Green] obs.south west);
+
+    \path (d.south) ++ (0, -2em) node[anchor=north west, color=Plum!67] (feed){Feedthrough};
+    \draw [color=Plum!87] (d.south) |- ([xshift=-0.3ex, color=Plum] feed.south east);
+
+  \end{tikzpicture}
+
+  \vfill
+\end{frame}
+
+
+\begin{frame}%{Observability and Controlability}
+  \vfill
+
+  \begin{minipage}{.28\textwidth}
+    \Large
+
+    \[
+    \mathcal{O}_k
+    =
+    \begin{bmatrix}
+      \bm{C} \\ \bm{CA} \\ \bm{CA}^2 \\ \bm{CA}^3 \\ \vdots \\ \bm{CA}^{k-1}
+    \end{bmatrix}
+    \]
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.68\textwidth}
+    \Large
+
+    \[
+    \mathcal{C}_k
+    =
+    \begin{bmatrix}
+      \bm{B} & \bm{AB} & \bm{A}^2 \bm{B} & \bm{A}^3 \bm{B} & \cdots & \bm{A}^{k-1} \bm{B}
+    \end{bmatrix}
+    \]
+  \end{minipage}
+
+  \vfill
+
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \underline{\textbf{Observability}}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.68\textwidth}
+    \centering
+    \underline{\textbf{Controlability}}
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \centering
+  \vfill
+
+  {\Large
+  \[
+    \bm{h}_k
+    =
+    \begin{bmatrix}
+      \bm{D} & \bm{CB} & \bm{CAB} & \bm{CA}^2\bm{B} & \bm{CA}^3 \bm{B} & \cdots & \bm{CA}^{k-1} \bm{B}
+    \end{bmatrix}
+  \]
+  }
+
+  \bigskip
+
+  \underline{\textbf{Markov parameters of the system}}
+
+  \vfill
+\end{frame}
+
+
+% {
+% \setbeamercolor*{background canvas}{bg=white}
+% \setbeamercolor{normal text}{fg=black}
+% \usebeamercolor[fg]{normal text}
+%
+% \begin{frame}
+%   \vfill
+%
+%   \begin{minipage}{.48\textwidth}
+%     \centering
+%     \begin{tikzpicture}[>=stealth]
+%         \path[pattern={Lines[angle=45,distance={8pt/sqrt(2)}]}] (-2, 5) edge ++(4,0) rectangle ++ (4, 0.5);
+%
+%         \draw[decorate,decoration={coil, segment length=5pt, aspect=0.7, amplitude=4pt,
+%             pre=lineto, pre length=5mm, post=lineto, post length=5mm}] (0.5, 5) -- (0.5, 2.5)
+%         node[left, draw, minimum size=1cm, fill=blue!20] (m) {$m$};
+%
+%         \draw[] (-0.5, 5) -- (-0.5, 4) {};
+%         \draw[] (-0.25, 4) -- (-0.75, 4) {};
+%
+%         \draw[] (-0.5, 3.75) -- (-0.5, 2.5) {};
+%         \draw[] (-0.25, 3.75) -- (-0.75, 3.75) {};
+%
+%         \draw[] (-0.25, 3.75) -- (-0.25, 4.25) {};
+%         \draw[] (-0.75, 3.75) -- (-0.75, 4.25) {};
+%
+%         \draw[blue] (m.center-|0, 0) ++ (0, 1) -- ++ (-2, 0)
+%         edge[<-,edge label'=$x$,shorten >=1pt] (m.center-|-2, 0)
+%         (m.center-|0, 0) ++ (0, -1) -- ++ (-2, 0)
+%         edge[<-,edge label=$-x$,shorten >=1pt] (m.center-|-2, 0);
+%         %(m.east) edge[dashed] (m.east-|2, 0);
+%         %(m.east-|2, 0) node[right] {Equilibrium};
+%     \end{tikzpicture}
+%   \end{minipage}%
+%   \hfill
+%   \begin{minipage}{.48\textwidth}
+%     \centering
+%
+%     \Large
+%     \[
+%     \begin{aligned}
+%       \dfrac{\mathrm{d}}{\mathrm{d}t} \begin{bmatrix} x \\ v \end{bmatrix}
+%       & =
+%       \begin{bmatrix}
+%         0 & 1 \\
+%         -1 & -2\zeta
+%       \end{bmatrix}
+%       \begin{bmatrix} x \\ v \end{bmatrix}
+%       +
+%       \begin{bmatrix}
+%         0 \\ 1
+%       \end{bmatrix} u \\
+%       y & = \begin{bmatrix} 1 & 0 \end{bmatrix} \begin{bmatrix} x \\ v \end{bmatrix}
+%     \end{aligned}
+%     \]
+%
+%   \end{minipage}
+%
+%   \vfill
+% \end{frame}
+%
+% \begin{frame}
+%   \vfill
+%   \centering
+%   \includegraphics[width=\textwidth]{pendulum_impulse_response}
+%   \vfill
+% \end{frame}
+%
+% }
 
 \begin{frame}{EigenRealization Algorithm}
   \vfill
@@ -1792,11 +2492,11 @@
   \bm{H}_1
   =
   \begin{bmatrix}
-    y_1 & y_2 & y_3 & y_4 & y_5 \\
-    y_2 & y_3 & y_4 & y_5 & y_6 \\
-    y_3 & y_4 & y_5 & y_6 & y_7 \\
-    y_4 & y_5 & y_6 & y_7 & y_8 \\
-    y_5 & y_6 & y_7 & y_8 & y_9 \\
+    h_1 & h_2 & h_3 & h_4 & h_5 \\
+    h_2 & h_3 & h_4 & h_5 & h_6 \\
+    h_3 & h_4 & h_5 & h_6 & h_7 \\
+    h_4 & h_5 & h_6 & h_7 & h_8 \\
+    h_5 & h_6 & h_7 & h_8 & h_9 \\
   \end{bmatrix}
   \]
 
@@ -1863,11 +2563,11 @@
   \bm{H}_2
   =
   \begin{bmatrix}
-    y_2 & y_3 & y_4 & y_5 & y_6 \\
-    y_3 & y_4 & y_5 & y_6 & y_7 \\
-    y_4 & y_5 & y_6 & y_7 & y_8 \\
-    y_5 & y_6 & y_7 & y_8 & y_9 \\
-    y_6 & y_7 & y_8 & y_9 & y_{10} \\
+    h_2 & h_3 & h_4 & h_5 & h_6 \\
+    h_3 & h_4 & h_5 & h_6 & h_7 \\
+    h_4 & h_5 & h_6 & h_7 & h_8 \\
+    h_5 & h_6 & h_7 & h_8 & h_9 \\
+    h_6 & h_7 & h_8 & h_9 & h_{10} \\
   \end{bmatrix}
   \]
 
@@ -1954,7 +2654,7 @@
     {
     \Large
     \[
-      \bm{D} = \bm{y}_0
+      \bm{D} = \bm{h}_0
     \]
     }
   \end{minipage}
@@ -2032,6 +2732,66 @@
   Cylinder flow example
 \end{frame}
 
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item Relies solely on the impulse response of the system and efficient numerical linear algebra.
+
+      \bigskip
+
+      \item Identifies the minimal number of degrees of freedom needed to represent the dynamics.
+
+      \bigskip
+
+      \item Benefits from strong theoretical guarantees and is well-grounded in control theory.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{Green} \bm{+}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+\begin{frame}
+  \vfill
+
+  \begin{minipage}{.68\textwidth}
+    \begin{itemize}
+      \item Need a really good estimate of the impulse reponse.
+
+      \bigskip
+
+      \item Extension to \textbf{interpretable} nonlinear systems is not straitghtforward.
+
+      \bigskip
+
+      \item Parametric variations can be easily included into this framework.
+
+    \end{itemize}
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{.28\textwidth}
+    \centering
+    \Huge
+    \[
+    \color{red} \bm{-}
+    \]
+  \end{minipage}
+
+  \vfill
+\end{frame}
+
+
 \section{Conclusion}
 \begin{frame}
   \sectionpage
@@ -2040,473 +2800,7 @@
 \begin{frame}
   \vfill
 
-  Since the work of G. Golub \emph{et al.} in the late 1960s, SVD plays a pivotal role in numerical linear algebra.
-
   \vfill
 \end{frame}
-
-\begin{frame}
-  \vfill
-
-  It is widely used in control theory to characterize various properties of input-output linear dynamical systems or for system identification purposes.
-  \vfill
-\end{frame}
-
-\begin{frame}
-  \vfill
-
-  It also lays the foundation for the mathematical description of \emph{quantum entanglement} in particle physics.
-  \vfill
-\end{frame}
-
-\begin{frame}
-  \vfill
-
-  \centering
-
-  \begin{tikzpicture}[scale=0.75]
-    % \draw[help lines, step=1] (-7, -4) grid (6, 4);
-
-    \draw[step=1, ultra thick, draw=blue!67] (-7, -3) grid (-6, 3);
-
-    \draw[step=1, ultra thick, draw=Green!67] (5, -3) grid (6, 3);
-
-    \draw[step=1, ultra thick, draw=red!67] (-1, -1) grid (0, 1);
-
-    \draw[ultra thick] (-5.5, -3) -- (-1.5, -1) -- (-1.5, 1) -- (-5.5, 3) -- cycle;
-
-    \draw[ultra thick] (4.5, -3) -- (0.5, -1) -- (0.5, 1) -- (4.5, 3) -- cycle;
-
-    \node[anchor=north] at (-6.5, -3.5) {\highlightdark{blue}{\Large $\bm{x}$}};
-    \node[anchor=north] at (-0.5, -1.5) {\highlightdark{red}{\Large $\bm{z}$}};
-    \node[anchor=north] at (5.5, -3.5) {\highlightdark{Green}{\Large $\hat{\bm{x}}$}};
-
-    \node[] at (-3.5, 0) {\large \textbf{Encoder}};
-    \node[] at (2.5, 0) {\large \textbf{Decoder}};
-
-  \end{tikzpicture}
-
-  \bigskip
-
-  Many (linear) dimensionality reduction techniques in machine learning can actually be re-interpreted as variations around the theme of SVD.
-
-  \vfill
-\end{frame}
-
-
-
-
-
-
-% \begin{frame}{N.\ Wiener's classification}
-%   \centering
-%   \vfill
-%
-%   \begin{tikzpicture}
-%     %\draw[help lines, step=1] (-7, -3) grid (7, 3);
-%
-%     \draw[thick, white, fill=black] (-2, 0) circle (3);
-%     \draw[thick, black,fill=white] (2, 0) circle (3);
-%
-%     \begin{scope}
-%       \clip (-2, 0) circle (3);
-%       \clip (2, 0) circle (3);
-%       \fill[thick, black, fill=gray!40] (0, 0) circle (3);
-%     \end{scope}
-%
-%     \node[anchor=east] at (-2, -3.5) {\textbf{Black box models}};
-%     \node[anchor=west] at (2, -3.5) {\textbf{White box models}};
-%
-%     \node at (-2, 0) (A) {};
-%     \path (A) ++(135:2.75) node[anchor=west] {Feedforward nets};
-%     \path (A) ++(160:2.95) node[anchor=west] {Reinforcement};
-%     \path (A) ++(170:2.8) node[anchor=west] {learning};
-%     \path (A) ++(195:2.95) node[anchor=west] {Image classification};
-%     \path (A) ++(220:2.95) node[anchor=west] {Model-free inference};
-%
-%
-%     \node at (2, 0) (B) {};
-%     \path (B) ++(45:2.75) node[anchor=east] {\textcolor{black}{First principles}};
-%     \path (B) ++(20:2.75) node[anchor=east] {\textcolor{black}{Newton's eq.}};
-%     \path (B) ++(0:2.9) node[anchor=east] {\textcolor{black}{Maxwell's eq.}};
-%     \path (B) ++(-20:2.9) node[anchor=east] {\textcolor{black}{Differential eq.}};
-%     \path (B) ++(-45:2.95) node[anchor=east] {\textcolor{black}{Parameter inference}};
-%
-%   \end{tikzpicture}
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}{Example: Face recognition}
-%   two faces with arrows
-% \end{frame}
-%
-% \begin{frame}{Example: Face recognition}
-%   overview figure of the SIAM paper
-% \end{frame}
-%
-% \begin{frame}{Example: System identification}
-%
-% \end{frame}
-%
-% \section{A brief overview of SVD}
-% \begin{frame}
-%   \sectionpage
-% \end{frame}
-%
-% \begin{frame}
-%   \vfill
-%
-%
-%   \begin{tcolorbox}[
-%     enhanced,
-%     coltitle=black,
-%     coltext=white,
-%     colback=black,
-%     title=\textbf{Singular value decomposition},
-%     frame style tile={width=\paperwidth}{background.jpg}
-%     ]
-%
-%     \begin{overprint}
-%
-%       \onslide<1>
-%       \large
-%       \[
-%       \bm{A} = \bm{U} \boldsymbol{\Sigma} \bm{V}^T
-%       \]
-%
-%       \onslide<2>
-%       \large
-%       \[
-%       \begin{bmatrix}
-%         \bm{0} & \bm{A} \\
-%         \bm{A}^T & \bm{0}
-%       \end{bmatrix}
-%       \begin{bmatrix}
-%         \bm{u}_i \\ \bm{v}_i
-%       \end{bmatrix}
-%       =
-%       \sigma_i
-%       \begin{bmatrix}
-%         \bm{u}_i \\ \bm{v}_i
-%       \end{bmatrix}
-%       \]
-%
-%     \end{overprint}
-%   \end{tcolorbox}
-%
-%   \bigskip
-%
-%   Generalization of the \emph{eigenvalue decomposition} to \textbf{non-square matrices} by E. Beltrami (1873) and C. Jordan (1874).
-%   The first efficient numerical algorithm was developed by G.\ Golub \emph{et al.} in the late 1960s.
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}
-%   Schematic SVD
-% \end{frame}
-%
-% \begin{frame}{Geometric interpretation}
-%
-% \end{frame}
-%
-% \begin{frame}{Ordinary least-squares}
-%   \vfill
-%   \begin{minipage}{.48\textwidth}
-%     \begin{overprint}
-%       \onslide<1>
-%       \Large
-%       \[
-%       \minimize_{\bm{x}} \dfrac{1}{2} \| \bm{Ax} - \bm{b} \|_2^2
-%       \]
-%
-%       \onslide<2>
-%       \Large
-%       \[
-%       \hat{\bm{x}} = \bm{A}^{\dagger} \bm{b}
-%       \]
-%
-%       \onslide<3>
-%       \Large
-%       \[
-%       \hat{\bm{x}} = \bm{V} \boldsymbol{\Sigma}^{-1} \bm{U}^T \bm{b}
-%       \]
-%     \end{overprint}
-%   \end{minipage}%
-%   \hfill
-%   \begin{minipage}{.48\textwidth}
-%     \large
-%     \[
-%     \begin{bmatrix}
-%       ~ & ~ & ~ & ~ & ~ \\
-%       ~ & ~ & ~ & ~ & ~ \\
-%       ~ & ~ & ~ & ~ & ~ \\
-%       ~ & ~ & ~ & ~ & ~ \\
-%       ~ & ~ & \bm{A} & ~ & ~ \\
-%       ~ & ~ & ~ & ~ & ~ \\
-%       ~ & ~ & ~ & ~ & ~ \\
-%       ~ & ~ & ~ & ~ & ~ \\
-%       ~ & ~ & ~ & ~ & ~
-%     \end{bmatrix}
-%     \begin{bmatrix}
-%       ~ \\ ~ \\ \bm{x} \\ ~ \\ ~
-%     \end{bmatrix}
-%     =
-%     \begin{bmatrix}
-%       ~ \\ ~ \\ ~ \\ ~ \\ \bm{b} \\ ~ \\ ~ \\ ~ \\ ~
-%     \end{bmatrix}
-%     \]
-%   \end{minipage}
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}{Low-rank approximation}
-%   \vfill
-%
-%   \begin{minipage}{.48\textwidth}
-%     \begin{overprint}
-%       \onslide<1>
-%       \Large
-%       \[
-%       \begin{aligned}
-%         \minimize_{\hat{\bm{A}}} & \| \bm{A} - \hat{\bm{A}} \|_F^2 \\
-%         \subto & \mathrm{rank~} \hat{\bm{A}} = r
-%       \end{aligned}
-%       \]
-%
-%       \onslide<2>
-%       \Large
-%       \[
-%       \hat{\bm{A}} = \sum_{i=1}^k \sigma_i \bm{u}_i \bm{v}_i^T
-%       \]
-%     \end{overprint}
-%   \end{minipage}%
-%   \hfill
-%   \begin{minipage}{.48\textwidth}
-%   \end{minipage}
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}{Orthogonal Procrustes problem}
-%   \vfill
-%   \begin{minipage}{.48\textwidth}
-%     \begin{overprint}
-%       \onslide<1>
-%       \large
-%       \[
-%       \begin{aligned}
-%         \minimize_{\bm{R}} & \| \bm{RA} - \bm{B} \|_F \\
-%         \subto & \bm{R}^T \bm{R} = \bm{I}
-%       \end{aligned}
-%       \]
-%
-%       \onslide<2>
-%       \large
-%       \[
-%       \bm{BA}^T = \bm{U} \boldsymbol{\Sigma} \bm{V}^T
-%       \]
-%
-%       \onslide<3>
-%       \large
-%       \[
-%       \bm{R} = \bm{UV}^T
-%       \]
-%
-%     \end{overprint}
-%   \end{minipage}%
-%   \hfill
-%   \begin{minipage}{.48\textwidth}
-%     \includegraphics[width=\textwidth]{procrustes}
-%   \end{minipage}
-%   \vfill
-% \end{frame}
-%
-% \section{SVD in data-driven modeling}
-% \begin{frame}
-%   \sectionpage
-% \end{frame}
-%
-% \begin{frame}
-%   \vfill
-%
-%   \Large
-%
-%   \[
-%   \bm{y} = \bm{Kx} + \varepsilon
-%   \]
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}{Linear deconvolution problem}
-%   Schematic of a linear system
-% \end{frame}
-%
-% \begin{frame}{Linear deconvolution problem}
-%   Schematic of deconvolution
-% \end{frame}
-%
-% \begin{frame}
-%   \vfill
-%
-%   \Large
-%
-%   \[
-%   \bm{y} = \bm{Kx} + \varepsilon
-%   \]
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}
-%
-% \end{frame}
-%
-% \begin{frame}
-%
-%   \vfill
-%
-%   \begin{tcolorbox}[
-%       enhanced,
-%       coltitle=black,
-%       coltext=white,
-%       colback=black,
-%       title=\textbf{Fundamental problem of component analysis},
-%       frame style tile={width=\paperwidth}{background.jpg}
-%     ]
-%
-%     \begin{overprint}
-%       \onslide<1>
-%       \large
-%       \[
-%       \begin{aligned}
-%         \minimize_{\bm{K}} & \| \bm{M}^{\frac12} \left( \bm{Y} - \bm{KX} \right) \|_F \\
-%         \subto & \mathrm{rank~} \bm{K} = r.
-%       \end{aligned}
-%       \]
-%
-%       \onslide<2>
-%       \large
-%       \[
-%       \begin{aligned}
-%         \minimize_{\bm{P}, \bm{Q}} & \| \bm{M}^{\frac12}  \left( \bm{Y} - \bm{PQ}^T \bm{X} \right) \|_F \\
-%         \subto & \bm{P}^T \bm{MP} = \bm{I}_r \quad \left( \mathrm{ou~} \bm{Q}^T \bm{XX}^T \bm{Q} = \bm{I}_r \right).
-%       \end{aligned}
-%       \]
-%
-%     \end{overprint}
-%
-%   \end{tcolorbox}
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}
-%   \vfill
-%
-%   \Large
-%   \[
-%   \begin{bmatrix}
-%     \bm{M} & \bm{0} \\
-%     \bm{0} & \bm{0}
-%   \end{bmatrix}
-%   \begin{bmatrix}
-%     \bm{p}_i \\ \bm{q}_i
-%   \end{bmatrix}
-%   \lambda_i
-%   =
-%   \begin{bmatrix}
-%     \bm{0} & \bm{M} \bm{C}_{\bm{yx}} \\
-%     \bm{C}_{\bm{xy}} \bm{M} & - \bm{C}_{\bm{xx}}
-%   \end{bmatrix}
-%   \begin{bmatrix}
-%     \bm{p}_i \\ \bm{q}_i
-%   \end{bmatrix}
-%   \]
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}{Proper Orthogonal Decomposition}
-%   \vfill
-%
-%   \begin{minipage}{.38\textwidth}
-%     \begin{tcolorbox}[
-%         enhanced,
-%         coltitle=black,
-%         coltext=white,
-%         colback=black,
-%         title=\textbf{POD eigenproblem},
-%         frame style tile={width=\paperwidth}{background.jpg}
-%       ]
-%       \large
-%       \[
-%       \bm{M} \bm{p}_i \lambda_i = \bm{C}_{\bm{xx}} \bm{p}_i
-%       \]
-%
-%       \smallskip
-%     \end{tcolorbox}
-%   \end{minipage}%
-%   \hfill
-%   \begin{minipage}{.58\textwidth}
-%     POD is recovered if $\bm{X} = \bm{Y}$ and $\bm{P} = \bm{Q}$.
-%     It aims at characterizing the second order statistics of the random variable $\bm{x}$.
-%   \end{minipage}
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}
-%   \vfill
-%
-%   \begin{minipage}{.48\textwidth}
-%
-%     \centering
-%     \textbf{Complex Ginzburg-Landau equation}
-%
-%     \[
-%     \dfrac{\partial q}{\partial t} = -U \dfrac{\partial q}{\partial x} + \mu(x) q + \gamma \dfrac{\partial^2 q}{\partial x^2} - \beta \vert q \vert^2 q
-%     \]
-%   \end{minipage}%
-%   \hfill
-%   \begin{minipage}{.48\textwidth}
-%   \end{minipage}
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}
-%   \vfill
-%
-%   \begin{minipage}{.48\textwidth}
-%     Covariance matrix
-%   \end{minipage}%
-%   \hfill
-%   \begin{minipage}{.48\textwidth}
-%     Eigenspectrum
-%   \end{minipage}
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}
-%   \vfill
-%
-%   \begin{minipage}{.48\textwidth}
-%     POD mode
-%   \end{minipage}%
-%   \hfill
-%   \begin{minipage}{.48\textwidth}
-%     Phase portrait
-%   \end{minipage}
-%
-%   \vfill
-% \end{frame}
-%
-% \begin{frame}{Galerkin projection}
-%
-% \end{frame}
 
 \end{document}
